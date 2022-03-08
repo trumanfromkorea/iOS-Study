@@ -43,5 +43,5 @@ print(phone.name) // -> iphone
 var phoneClone: Device = phone
 phoneClone.name = "iphone pro"
 
-print(phone.name) // -> iphone
+print(phone.name) // -> iphone pro
 print(phoneClone.name) // -> iphone pro
