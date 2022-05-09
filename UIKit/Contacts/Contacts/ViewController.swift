@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // custom cell 을 이용하기 위함
+        let nib = UINib(nibName: "DemoTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "DemoTableViewCell")
+
         // UITableViewDelegate 와 UITableDataSource 를 이용하여 메소드 구현 (Delegate Pattern)
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,11 +46,13 @@ extension ViewController: UITableViewDataSource {
     // cell 지정
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 계속 cell 을 재사용하여 렌더링하기 위함이라고 생각됨
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        // indexPath 를 이용해 1:1 매핑 가능
-        cell.textLabel?.text = names[indexPath.row]
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DemoTableViewCell", for: indexPath) as! DemoTableViewCell
+        // 해당 cell 은 casting 해줘야함 (연결을 위해서인듯)
+        
+        // custome cell 의 IBOutlet 에 연결
+        cell.myLabel.text = names[indexPath.row]
+        cell.myImageView.backgroundColor = .blue
+        
         return cell
     }
 }

@@ -16,6 +16,8 @@
 		0D80126F2828F3450046E3F1 /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80126E2828F3450046E3F1 /* ContactsTests.swift */; };
 		0D8012792828F3450046E3F1 /* ContactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8012782828F3450046E3F1 /* ContactsUITests.swift */; };
 		0D80127B2828F3450046E3F1 /* ContactsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80127A2828F3450046E3F1 /* ContactsUITestsLaunchTests.swift */; };
+		0D801289282903180046E3F1 /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801287282903180046E3F1 /* DemoTableViewCell.swift */; };
+		0D80128A282903180046E3F1 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D801288282903180046E3F1 /* DemoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0D8012742828F3450046E3F1 /* ContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8012782828F3450046E3F1 /* ContactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUITests.swift; sourceTree = "<group>"; };
 		0D80127A2828F3450046E3F1 /* ContactsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0D801287282903180046E3F1 /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
+		0D801288282903180046E3F1 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				0D8012592828F3440046E3F1 /* SceneDelegate.swift */,
 				0D80125B2828F3440046E3F1 /* ViewController.swift */,
 				0D80125D2828F3440046E3F1 /* Main.storyboard */,
+				0D801287282903180046E3F1 /* DemoTableViewCell.swift */,
+				0D801288282903180046E3F1 /* DemoTableViewCell.xib */,
 				0D8012602828F3440046E3F1 /* Assets.xcassets */,
 				0D8012622828F3440046E3F1 /* LaunchScreen.storyboard */,
 				0D8012652828F3440046E3F1 /* Info.plist */,
@@ -233,6 +239,7 @@
 			files = (
 				0D8012642828F3440046E3F1 /* LaunchScreen.storyboard in Resources */,
 				0D8012612828F3440046E3F1 /* Assets.xcassets in Resources */,
+				0D80128A282903180046E3F1 /* DemoTableViewCell.xib in Resources */,
 				0D80125F2828F3440046E3F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			files = (
 				0D80125C2828F3440046E3F1 /* ViewController.swift in Sources */,
 				0D8012582828F3440046E3F1 /* AppDelegate.swift in Sources */,
+				0D801289282903180046E3F1 /* DemoTableViewCell.swift in Sources */,
 				0D80125A2828F3440046E3F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
