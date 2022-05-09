@@ -15,9 +15,14 @@ class ViewController: UIViewController, UITableViewDataSource {
 
         return table
     }()
+    
+    var items: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 디바이스 저장값 확인 및 초기화
+        self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
 
         // navigation title
         title = "To Do List"
@@ -46,12 +51,22 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         // 취소버튼, 완료버튼 추가
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [weak self] _ in
             // textField 입력값 가져오기
             if let field = alert.textFields?.first {
                 if let text = field.text, !text.isEmpty {
                     // 새로운 아이템 추가
-                    print(text)
+                    DispatchQueue.main.async {
+                        // 디바이스에 값 저장
+                        var currentItems = UserDefaults.standard.stringArray(forKey: "items") ?? []
+                        currentItems.append(text)
+                        UserDefaults.standard.setValue(currentItems, forKey: "items")
+                        
+                        // 리스트에 값 추가 후 reload
+                        self?.items.append(text)
+                        self?.table.reloadData()
+                    }
+                    
                 }
             }
         }))
@@ -62,12 +77,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     // MARK: - UITableViewDataSource 구현 메소드
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
+        
+        cell.textLabel?.text = items[indexPath.row]
+        
         return cell
     }
 }
