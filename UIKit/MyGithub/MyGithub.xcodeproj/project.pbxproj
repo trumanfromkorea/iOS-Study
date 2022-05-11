@@ -17,6 +17,7 @@
 		0D8012B928290E9E0046E3F1 /* MyGithubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8012B828290E9E0046E3F1 /* MyGithubUITests.swift */; };
 		0D8012BB28290E9E0046E3F1 /* MyGithubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8012BA28290E9E0046E3F1 /* MyGithubUITestsLaunchTests.swift */; };
 		0D8012C9282913410046E3F1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0D8012C8282913410046E3F1 /* Alamofire */; };
+		0DC9D217282C061300B1E016 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9D216282C061300B1E016 /* data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		0D8012B428290E9E0046E3F1 /* MyGithubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGithubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8012B828290E9E0046E3F1 /* MyGithubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubUITests.swift; sourceTree = "<group>"; };
 		0D8012BA28290E9E0046E3F1 /* MyGithubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DC9D216282C061300B1E016 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		0D80129628290E9D0046E3F1 /* MyGithub */ = {
 			isa = PBXGroup;
 			children = (
+				0DC9D215282C059900B1E016 /* Private */,
 				0D80129728290E9D0046E3F1 /* AppDelegate.swift */,
 				0D80129928290E9D0046E3F1 /* SceneDelegate.swift */,
 				0D80129B28290E9D0046E3F1 /* ViewController.swift */,
@@ -127,6 +130,14 @@
 				0D8012BA28290E9E0046E3F1 /* MyGithubUITestsLaunchTests.swift */,
 			);
 			path = MyGithubUITests;
+			sourceTree = "<group>";
+		};
+		0DC9D215282C059900B1E016 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				0DC9D216282C061300B1E016 /* data.swift */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				0D80129C28290E9D0046E3F1 /* ViewController.swift in Sources */,
 				0D80129828290E9D0046E3F1 /* AppDelegate.swift in Sources */,
 				0D80129A28290E9D0046E3F1 /* SceneDelegate.swift in Sources */,
+				0DC9D217282C061300B1E016 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
