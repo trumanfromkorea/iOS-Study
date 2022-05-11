@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped(_ sender: Any) {
-        let url = "https://api.github.com/users/trumanfromkorea"
+        let url = GithubInfo.githubAPI + "/users/" + GithubInfo.myUsername
 
         AF.request(url, method: .get).response { response in
             let decoder = JSONDecoder()
@@ -27,6 +27,15 @@ class ViewController: UIViewController {
             } catch let error {
                 print(error)
             }
+        }
+    }
+
+    @IBAction func authTestButton(_ sender: Any) {
+        let scope = "repo,user"
+        let urlString = GithubInfo.githubAPI + "/login/oauth/authorize?client_id=\(GithubInfo.githubAppClientID)&scope=\(scope)"
+
+        if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
         }
     }
 }
