@@ -20,6 +20,7 @@
 		0DB712C628316B8500CDA607 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB712C428316B8500CDA607 /* WeatherTableViewCell.xib */; };
 		0DB712C928316B9100CDA607 /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB712C728316B9100CDA607 /* HourlyTableViewCell.swift */; };
 		0DB712CA28316B9100CDA607 /* HourlyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB712C828316B9100CDA607 /* HourlyTableViewCell.xib */; };
+		0DB712CD283173C400CDA607 /* PrivateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB712CC283173C400CDA607 /* PrivateData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0DB712C428316B8500CDA607 /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		0DB712C728316B9100CDA607 /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
 		0DB712C828316B9100CDA607 /* HourlyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyTableViewCell.xib; sourceTree = "<group>"; };
+		0DB712CC283173C400CDA607 /* PrivateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		0DB71290283167A100CDA607 /* MyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				0DB712CB283173B300CDA607 /* Private */,
 				0DB712C228316B6900CDA607 /* HourlyCollectionCell */,
 				0DB712C128316B6200CDA607 /* WeatherCell */,
 				0DB71291283167A100CDA607 /* AppDelegate.swift */,
@@ -153,6 +156,14 @@
 				0DB712C828316B9100CDA607 /* HourlyTableViewCell.xib */,
 			);
 			path = HourlyCollectionCell;
+			sourceTree = "<group>";
+		};
+		0DB712CB283173B300CDA607 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				0DB712CC283173C400CDA607 /* PrivateData.swift */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 				0DB712C528316B8500CDA607 /* WeatherTableViewCell.swift in Sources */,
 				0DB71296283167A100CDA607 /* ViewController.swift in Sources */,
 				0DB712C928316B9100CDA607 /* HourlyTableViewCell.swift in Sources */,
+				0DB712CD283173C400CDA607 /* PrivateData.swift in Sources */,
 				0DB71292283167A100CDA607 /* AppDelegate.swift in Sources */,
 				0DB71294283167A100CDA607 /* SceneDelegate.swift in Sources */,
 			);

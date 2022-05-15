@@ -63,6 +63,8 @@ extension ViewController: CLLocationManagerDelegate {
 
         let lon = currentLocation.coordinate.longitude
         let lat = currentLocation.coordinate.latitude
+        
+        let url = "your api url"
 
         print("\(lon) , \(lat)")
     }
