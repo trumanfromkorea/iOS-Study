@@ -40,7 +40,13 @@
                             <constraint firstItem="wdM-aE-NYE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mCC-Hq-Cdx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tug-jP-JOJ"/>
+                    <navigationItem key="navigationItem" id="Tug-jP-JOJ">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="nIX-k1-pWy">
+                            <connections>
+                                <action selector="didTapAdd:" destination="BYZ-38-t0r" id="5Uz-kl-Vnf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wdM-aE-NYE" id="BlQ-mA-j6U"/>
                     </connections>
@@ -49,16 +55,66 @@
             </objects>
             <point key="canvasLocation" x="478" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry View Controller-->
+        <scene sceneID="d6p-HT-dND">
+            <objects>
+                <viewController storyboardIdentifier="entry" id="NaO-lc-zuJ" customClass="EntryViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N6g-qW-Ugk">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffk-Sl-EKb">
+                                <rect key="frame" x="20" y="64" width="350" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="kBm-Ol-hQg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sec-wK-5G5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ffk-Sl-EKb" firstAttribute="top" secondItem="sec-wK-5G5" secondAttribute="top" constant="20" id="TCC-RS-Dh5"/>
+                            <constraint firstItem="ffk-Sl-EKb" firstAttribute="leading" secondItem="sec-wK-5G5" secondAttribute="leading" constant="20" id="cNa-2Z-b6j"/>
+                            <constraint firstItem="sec-wK-5G5" firstAttribute="trailing" secondItem="ffk-Sl-EKb" secondAttribute="trailing" constant="20" id="iu1-zA-lgY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="ffk-Sl-EKb" id="LSM-ck-Mnu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wp0-EW-jfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="792"/>
+        </scene>
+        <!--Task View Controller-->
         <scene sceneID="0dT-dK-U6o">
             <objects>
-                <viewController id="fe2-oD-t3C" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="task" id="fe2-oD-t3C" customClass="TaskViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="luq-6e-4Os">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fp-Nh-jhd">
+                                <rect key="frame" x="12" y="56" width="366" height="742"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="51O-B4-9D4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="51O-B4-9D4" firstAttribute="trailing" secondItem="6Fp-Nh-jhd" secondAttribute="trailing" constant="12" id="EIp-JY-d0G"/>
+                            <constraint firstItem="51O-B4-9D4" firstAttribute="bottom" secondItem="6Fp-Nh-jhd" secondAttribute="bottom" constant="12" id="Wyl-GN-3aL"/>
+                            <constraint firstItem="6Fp-Nh-jhd" firstAttribute="top" secondItem="51O-B4-9D4" secondAttribute="top" constant="12" id="qCf-ep-md1"/>
+                            <constraint firstItem="6Fp-Nh-jhd" firstAttribute="leading" secondItem="51O-B4-9D4" secondAttribute="leading" constant="12" id="wOn-dq-8vr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="6Fp-Nh-jhd" id="kMd-3u-3Cw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pg2-1U-v1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
