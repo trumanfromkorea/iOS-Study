@@ -23,11 +23,12 @@ class WeatherTableViewCell: UITableViewCell {
     func configure(with model: WeatherResponse) {
         let kelvin = 273.15
         
-        minTempLabel.text = "\(model.main.temp_min - kelvin)"
-        maxTempLabel.text = "\(model.main.temp_max - kelvin)"
-
+        minTempLabel.text = "\((model.main.temp_min - kelvin).rounded())"
+        maxTempLabel.text = "\((model.main.temp_max - kelvin).rounded())"
         dateLabel.text = getDayForDate(Date())
-        weatherImage.image = UIImage(systemName: "sun.min.fill")
+        
+        weatherImage.image = UIImage(systemName: "sun.max.fill")
+        weatherImage.contentMode = .scaleAspectFit
     }
 
     func getDayForDate(_ date: Date?) -> String {
@@ -35,14 +36,13 @@ class WeatherTableViewCell: UITableViewCell {
         else { return "" }
 
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-dd"
+        formatter.dateFormat = "MM월 dd일"
 
         return formatter.string(from: inputDate)
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .gray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

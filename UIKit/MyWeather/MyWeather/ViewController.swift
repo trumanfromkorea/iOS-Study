@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
 
     var currentLocation: CLLocation?
+//    var current: CurrentWeather?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,18 +87,47 @@ extension ViewController: CLLocationManagerDelegate {
             else { return }
 
             self.models.append(result)
+            // 여기서 current weather 넣어주기
 
             // Update user interface
             DispatchQueue.main.async {
                 self.table.reloadData()
+                self.table.tableHeaderView = self.createTableHeader()
             }
 
         }).resume()
+    }
+
+    func createTableHeader() -> UIView {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width))
+
+        let locationLabel = UILabel(frame: CGRect(x: 10, y: 10, width: view.frame.size.width - 20, height: headerView.frame.height / 5))
+        let summaryLabel = UILabel(frame: CGRect(x: 10, y: 20 + locationLabel.frame.size.height, width: view.frame.size.width - 20, height: headerView.frame.height / 5))
+        let tempLabel = UILabel(frame: CGRect(x: 10, y: 20 + summaryLabel.frame.size.height, width: view.frame.size.width - 20, height: headerView.frame.height / 2))
+
+        headerView.addSubview(locationLabel)
+        headerView.addSubview(summaryLabel)
+        headerView.addSubview(tempLabel)
+
+        locationLabel.textAlignment = .center
+        summaryLabel.textAlignment = .center
+        tempLabel.textAlignment = .center
+
+        locationLabel.text = "Current Location" // current 넣어주기
+        summaryLabel.text = "Clear"
+        tempLabel.text = "12"
+
+        tempLabel.font = UIFont(name: "Helvetica-Bold", size: 32)
+
+        return headerView
     }
 }
 
 // Table
 extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
 
 extension ViewController: UITableViewDataSource {
