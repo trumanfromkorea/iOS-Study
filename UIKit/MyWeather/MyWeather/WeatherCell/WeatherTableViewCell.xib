@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,12 +35,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMO-7n-hmf">
-                        <rect key="frame" x="198.5" y="98" width="80" height="80.5"/>
+                        <rect key="frame" x="198.5" y="98.5" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="OWM-Nj-pqR"/>
                             <constraint firstAttribute="width" constant="80" id="rlH-Mf-QGK"/>
                         </constraints>
-                        <imageReference key="image" image="sun.max.fill" catalog="system" renderingMode="original"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhU-kU-yOe">
                         <rect key="frame" x="20" y="11" width="178.5" height="255"/>
@@ -75,7 +73,4 @@
             <point key="canvasLocation" x="245.6521739130435" y="36.495535714285715"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
-    </resources>
 </document>

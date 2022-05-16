@@ -16,7 +16,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var table: UITableView!
 
-    var models = [WeatherResponse]()
+    var models = [Daily]()
 
     let locationManager = CLLocationManager()
 
@@ -65,7 +65,7 @@ extension ViewController: CLLocationManagerDelegate {
         let lon = currentLocation.coordinate.longitude
         let lat = currentLocation.coordinate.latitude
 
-        let url = "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&appid=\(PrivateData.apiKey)"
+        let url = "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,hourly,alerts&appid=\(PrivateData.apiKey)"
 
         URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, _, error in
             // Validation
@@ -86,7 +86,9 @@ extension ViewController: CLLocationManagerDelegate {
             guard let result = json
             else { return }
 
-            self.models.append(result)
+            result.daily.forEach { daily in
+                self.models.append(daily)
+            }
             // 여기서 current weather 넣어주기
 
             // Update user interface
@@ -144,55 +146,29 @@ extension ViewController: UITableViewDataSource {
 }
 
 struct WeatherResponse: Codable {
-    var coord: Coord
-    var weather: [Weather]
-    var base: String
-    var main: MainInfo
-    var visibility: Int
-    var wind: Wind
-    var clouds: Clouds
-    var dt: Int
-    var sys: Sys
-    var timezone: Int
-    var id: Int
-    var name: String
-    var cod: Int
+    var lat: Double
+    var lon: Double
+    var timezone: String
+    var timezone_offset: Int
+    var daily: [Daily]
 }
 
-struct Coord: Codable {
-    var lon: Double
-    var lat: Double
+struct Daily: Codable {
+    var dt: Int
+    var sunrise: Int
+    var sunset: Int
+    var temp: Temp
+    var humidity: Int
+    var weather: [Weather]
+}
+
+struct Temp: Codable {
+    var min: Double
+    var max: Double
 }
 
 struct Weather: Codable {
     var id: Int
     var main: String
     var description: String
-    var icon: String
-}
-
-struct MainInfo: Codable {
-    var temp: Double
-    var feels_like: Double
-    var temp_min: Double
-    var temp_max: Double
-    var pressure: Int
-    var humidity: Int
-}
-
-struct Wind: Codable {
-    var speed: Double
-    var deg: Int
-}
-
-struct Clouds: Codable {
-    var all: Int
-}
-
-struct Sys: Codable {
-    var type: Int
-    var id: Int
-    var country: String
-    var sunrise: Int
-    var sunset: Int
 }
