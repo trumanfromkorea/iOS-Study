@@ -11,14 +11,15 @@ class WeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var tempLabel: UILabel!
 
+    static let identifier = "WeatherCollectionViewCell"
+
+    // data 받아와서 넣어주기
     func configure(with model: Hourly) {
         tempLabel.text = "\((model.temp - 273.15).rounded())"
-        
-        iconImageView.contentMode  = .scaleAspectFit
+
+        iconImageView.contentMode = .scaleAspectFit
         iconImageView.image = UIImage(systemName: "sun.max.fill")?.withRenderingMode(.alwaysOriginal)
     }
-
-    static let identifier = "WeatherCollectionViewCell"
 
     static func nib() -> UINib {
         return UINib(nibName: "WeatherCollectionViewCell", bundle: nil)
@@ -26,6 +27,5 @@ class WeatherCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 }
