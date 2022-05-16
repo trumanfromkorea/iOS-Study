@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet var table: UITableView!
 
     var models = [Daily]()
+    var currentWeather: Daily?
+    
+    var hourlyModels = [Hourly]()
 
     let locationManager = CLLocationManager()
 
@@ -65,7 +68,7 @@ extension ViewController: CLLocationManagerDelegate {
         let lon = currentLocation.coordinate.longitude
         let lat = currentLocation.coordinate.latitude
 
-        let url = "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,hourly,alerts&appid=\(PrivateData.apiKey)"
+        let url = "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,alerts&appid=\(PrivateData.apiKey)"
 
         URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, _, error in
             // Validation
@@ -89,7 +92,13 @@ extension ViewController: CLLocationManagerDelegate {
             result.daily.forEach { daily in
                 self.models.append(daily)
             }
-            // 여기서 current weather 넣어주기
+            
+            result.hourly.forEach { hourly in
+                self.hourlyModels.append(hourly)
+            }
+
+            // current weather 넣어주기
+            self.currentWeather = self.models[0]
 
             // Update user interface
             DispatchQueue.main.async {
@@ -104,8 +113,8 @@ extension ViewController: CLLocationManagerDelegate {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width))
 
         let locationLabel = UILabel(frame: CGRect(x: 10, y: 10, width: view.frame.size.width - 20, height: headerView.frame.height / 5))
-        let summaryLabel = UILabel(frame: CGRect(x: 10, y: 20 + locationLabel.frame.size.height, width: view.frame.size.width - 20, height: headerView.frame.height / 5))
-        let tempLabel = UILabel(frame: CGRect(x: 10, y: 20 + summaryLabel.frame.size.height, width: view.frame.size.width - 20, height: headerView.frame.height / 2))
+        let summaryLabel = UILabel(frame: CGRect(x: 10, y: 20 + locationLabel.frame.size.height, width: view.frame.size.width - 20, height: headerView.frame.height / 2))
+        let tempLabel = UILabel(frame: CGRect(x: 10, y: 20 + summaryLabel.frame.size.height, width: view.frame.size.width - 20, height: headerView.frame.height / 5))
 
         headerView.addSubview(locationLabel)
         headerView.addSubview(summaryLabel)
@@ -115,9 +124,13 @@ extension ViewController: CLLocationManagerDelegate {
         summaryLabel.textAlignment = .center
         tempLabel.textAlignment = .center
 
-        locationLabel.text = "Current Location" // current 넣어주기
-        summaryLabel.text = "Clear"
-        tempLabel.text = "12"
+        locationLabel.textColor = .white
+        summaryLabel.textColor = .white
+        tempLabel.textColor = .white
+
+        locationLabel.text = "Seoul" // current 넣어주기
+        summaryLabel.text = "\(currentWeather!.weather[0].description)"
+        tempLabel.text = "\((currentWeather!.temp.max - 273.15).rounded())"
 
         tempLabel.font = UIFont(name: "Helvetica-Bold", size: 32)
 
@@ -133,11 +146,21 @@ extension ViewController: UITableViewDelegate {
 }
 
 extension ViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        return section == 0 ? 1 : models.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = table.dequeueReusableCell(withIdentifier: HourlyTableViewCell.identifier, for: indexPath) as! HourlyTableViewCell
+            cell.configure(with: hourlyModels)
+
+            return cell
+        }
         let cell = table.dequeueReusableCell(withIdentifier: WeatherTableViewCell.identifier, for: indexPath) as! WeatherTableViewCell
         cell.configure(with: models[indexPath.row])
 
@@ -151,6 +174,7 @@ struct WeatherResponse: Codable {
     var timezone: String
     var timezone_offset: Int
     var daily: [Daily]
+    var hourly: [Hourly]
 }
 
 struct Daily: Codable {
@@ -159,6 +183,12 @@ struct Daily: Codable {
     var sunset: Int
     var temp: Temp
     var humidity: Int
+    var weather: [Weather]
+}
+
+struct Hourly: Codable {
+    var dt: Int
+    var temp: Double
     var weather: [Weather]
 }
 

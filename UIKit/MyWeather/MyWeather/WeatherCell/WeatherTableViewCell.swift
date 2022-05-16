@@ -28,19 +28,30 @@ class WeatherTableViewCell: UITableViewCell {
 
         dateLabel.text = getDayForDate(Date(timeIntervalSince1970: TimeInterval(model.dt)))
 
-        weatherImage.image = UIImage(systemName: "sun.max.fill")?.withRenderingMode(.alwaysOriginal)
+        let systemImage = getImageForWeather(model.weather[0].id / 100)
+
+        weatherImage.image = UIImage(systemName: systemImage)?.withRenderingMode(.alwaysOriginal)
         weatherImage.contentMode = .scaleAspectFit
     }
 
-//    func getImageForWeather(_ id: Int) -> String {
-//        switch id {
-//        case 2:
-//            return "rain"
-//        default:
-//            return ""
-//        }
-//
-//    }
+    func getImageForWeather(_ id: Int) -> String {
+        switch id {
+        case 2:
+            return "cloud.bolt.fill"
+        case 3:
+            return "cloud.fog.fill"
+        case 5:
+            return "cloud.rain.fill"
+        case 6:
+            return "cloud.snow.fill"
+        case 7:
+            return "aqi.medium"
+        case 8:
+            return "sun.max.fill"
+        default:
+            return ""
+        }
+    }
 
     func getDayForDate(_ date: Date?) -> String {
         guard let inputDate = date
@@ -58,7 +69,5 @@ class WeatherTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }
