@@ -16,7 +16,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var table: UITableView!
 
-    var models = [Weather]()
+    var models = [WeatherResponse]()
 
     let locationManager = CLLocationManager()
 
@@ -63,10 +63,36 @@ extension ViewController: CLLocationManagerDelegate {
 
         let lon = currentLocation.coordinate.longitude
         let lat = currentLocation.coordinate.latitude
-        
-        let url = "your api url"
 
-        print("\(lon) , \(lat)")
+        let url = "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&appid=\(PrivateData.apiKey)"
+
+        URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, _, error in
+            // Validation
+            guard let data = data, error == nil
+            else {
+                print("something went wrong")
+                return
+            }
+
+            // Convert data to models / some Object
+            var json: WeatherResponse?
+            do {
+                json = try JSONDecoder().decode(WeatherResponse.self, from: data)
+            } catch {
+                print("error \(error)")
+            }
+
+            guard let result = json
+            else { return }
+
+            self.models.append(result)
+
+            // Update user interface
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+
+        }).resume()
     }
 }
 
@@ -80,11 +106,63 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "", for: indexPath)
+        let cell = table.dequeueReusableCell(withIdentifier: WeatherTableViewCell.identifier, for: indexPath) as! WeatherTableViewCell
+        cell.configure(with: models[indexPath.row])
 
         return cell
     }
 }
 
-struct Weather {
+struct WeatherResponse: Codable {
+    var coord: Coord
+    var weather: [Weather]
+    var base: String
+    var main: MainInfo
+    var visibility: Int
+    var wind: Wind
+    var clouds: Clouds
+    var dt: Int
+    var sys: Sys
+    var timezone: Int
+    var id: Int
+    var name: String
+    var cod: Int
+}
+
+struct Coord: Codable {
+    var lon: Double
+    var lat: Double
+}
+
+struct Weather: Codable {
+    var id: Int
+    var main: String
+    var description: String
+    var icon: String
+}
+
+struct MainInfo: Codable {
+    var temp: Double
+    var feels_like: Double
+    var temp_min: Double
+    var temp_max: Double
+    var pressure: Int
+    var humidity: Int
+}
+
+struct Wind: Codable {
+    var speed: Double
+    var deg: Int
+}
+
+struct Clouds: Codable {
+    var all: Int
+}
+
+struct Sys: Codable {
+    var type: Int
+    var id: Int
+    var country: String
+    var sunrise: Int
+    var sunset: Int
 }
