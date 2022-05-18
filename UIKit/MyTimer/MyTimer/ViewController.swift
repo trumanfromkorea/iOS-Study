@@ -5,6 +5,7 @@
 //  Created by 장재훈 on 2022/05/18.
 //
 
+import CoreMotion
 import UIKit
 
 class ViewController: UIViewController {
@@ -16,9 +17,19 @@ class ViewController: UIViewController {
     var timer: Timer?
     var seconds: Int = 0
 
+    var motionManager = CMMotionManager()
+
+    var currentMaxAccelX: Double = 0
+    var currentMaxAccelY: Double = 0
+    var currentMaxAccelZ: Double = 0
+
+    var currentMaxRotX: Double = 0
+    var currentMaxRotY: Double = 0
+    var currentMaxRotZ: Double = 0
+
     override func viewDidLoad() {
+        initMotionManager()
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func onTappedStartButton(_ sender: Any) {
@@ -32,17 +43,20 @@ class ViewController: UIViewController {
             startTimer()
         }
     }
+
     @IBAction func onTappedStopButton(_ sender: Any) {
         stopTimer()
         seconds = 0
         setTimeLabel()
     }
-    
+
     @objc func onTimeFires() {
         seconds += 1
 
         setTimeLabel()
     }
+
+    // MARK: - Timer
 
     func stopTimer() {
         setButtonImage("play")
@@ -71,5 +85,72 @@ class ViewController: UIViewController {
 
     func pan(_ time: Int) -> String {
         return time < 10 ? "0\(time)" : "\(time)"
+    }
+
+    // MARK: - Motion
+
+    func initMotionManager() {
+//        resetMaxValue()
+
+        // interval 설정
+        print("initmotion")
+        motionManager.accelerometerUpdateInterval = 5
+        motionManager.gyroUpdateInterval = 5
+
+        // 수집 시작
+        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { accelerometerData, error in
+
+            self.outputAcceleratoinData(accelerometerData!.acceleration)
+            if error != nil {
+                print("\(error!)")
+            }
+        }
+
+        motionManager.startGyroUpdates(to: OperationQueue.current!) { gyroData, error in
+            self.outputRotationData(gyroData!.rotationRate)
+            if error != nil {
+                print("\(error!)")
+            }
+        }
+    }
+
+    func outputAcceleratoinData(_ acceleration: CMAcceleration) {
+        print("accelX : \(acceleration.x)")
+        if fabs(acceleration.x) > fabs(currentMaxAccelX) {
+            currentMaxAccelX = acceleration.x
+        }
+        print("accelY : \(acceleration.y)")
+        if fabs(acceleration.y) > fabs(currentMaxAccelY) {
+            currentMaxAccelY = acceleration.y
+        }
+        print("accelZ : \(acceleration.z)")
+        if fabs(acceleration.z) > fabs(currentMaxAccelZ) {
+            currentMaxAccelZ = acceleration.z
+        }
+
+        print("current Max Accel")
+        print(currentMaxAccelX)
+        print(currentMaxAccelY)
+        print(currentMaxAccelZ)
+    }
+
+    func outputRotationData(_ rotation: CMRotationRate) {
+        print("rotX : \(rotation.x)")
+        if fabs(rotation.x) > fabs(currentMaxRotX) {
+            currentMaxRotX = rotation.x
+        }
+        print("rotY : \(rotation.y)")
+        if fabs(rotation.y) > fabs(currentMaxRotY) {
+            currentMaxRotY = rotation.y
+        }
+        print("rotZ : \(rotation.z)")
+        if fabs(rotation.z) > fabs(currentMaxRotZ) {
+            currentMaxRotZ = rotation.z
+        }
+
+        print("current Max Rot")
+        print(currentMaxRotX)
+        print(currentMaxRotY)
+        print(currentMaxRotZ)
     }
 }
