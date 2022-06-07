@@ -14,12 +14,17 @@ class TimerViewController: UIViewController {
     var timer: Timer?
     var seconds: Int = 0
 
+    let enabledButtonColor = UIColor(hex: "#556EE6")
+    let disabledButtonColor = UIColor(hex: "#9da9e3")
+
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var stopButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureButtonState()
     }
 
     @IBAction func onTappedPlayPauseButton(_ sender: Any) {
@@ -36,19 +41,47 @@ class TimerViewController: UIViewController {
     }
 
     @IBAction func onTappedStopButton(_ sender: Any) {
-        stopTimer()
-        seconds = 0
-        setTimeLabel()
+        stopAlert()
+    }
+
+    func configureButtonState() {
+        playPauseButton.layer.cornerRadius = 15
+        stopButton.layer.cornerRadius = 15
+
+        playPauseButton.backgroundColor = enabledButtonColor
+        stopButton.backgroundColor = disabledButtonColor
     }
 
     func startTimer() {
+        navigationItem.hidesBackButton = true
+
         playPauseButton.setTitle("Pause", for: .normal)
+        playPauseButton.backgroundColor = enabledButtonColor
+
+        stopButton.backgroundColor = enabledButtonColor
+
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(onTimeFires), userInfo: nil, repeats: true)
     }
 
     func stopTimer() {
         playPauseButton.setTitle("Play", for: .normal)
+        playPauseButton.backgroundColor = enabledButtonColor
+
+        stopButton.backgroundColor = disabledButtonColor
+
         timer?.invalidate()
+    }
+
+    func stopAlert() {
+        let sheet = UIAlertController(title: "정지", message: "정말 정지하시겠습니까?", preferredStyle: .alert)
+        sheet.addAction(UIAlertAction(title: "아니오", style: .default))
+        sheet.addAction(UIAlertAction(title: "예", style: .default, handler: { _ in
+            self.stopTimer()
+            self.seconds = 0
+            self.setTimeLabel()
+        }))
+
+        present(sheet, animated: true)
     }
 
     @objc func onTimeFires() {
@@ -57,7 +90,6 @@ class TimerViewController: UIViewController {
     }
 
     func setTimeLabel() {
-
         let min = seconds / 60
         let sec = seconds % 60
 
