@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var timerLabel: UILabel!
-
     @IBOutlet var startButton: UIButton!
     @IBOutlet var endButton: UIButton!
 
@@ -98,13 +97,13 @@ class ViewController: UIViewController {
         motionManager.gyroUpdateInterval = 5
 
         // 수집 시작
-        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { accelerometerData, error in
-
-            self.outputAcceleratoinData(accelerometerData!.acceleration)
-            if error != nil {
-                print("\(error!)")
-            }
-        }
+//        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { accelerometerData, error in
+//
+//            self.outputAcceleratoinData(accelerometerData!.acceleration)
+//            if error != nil {
+//                print("\(error!)")
+//            }
+//        }
 
         motionManager.startGyroUpdates(to: OperationQueue.current!) { gyroData, error in
             self.outputRotationData(gyroData!.rotationRate)
