@@ -16,18 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qh-G1-pKc">
-                                <rect key="frame" x="162" y="396" width="91" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qh-G1-pKc">
+                                <rect key="frame" x="162" y="485.5" width="90.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="timer view"/>
                                 <connections>
                                     <action selector="navigateTimerView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7BR-Mj-5H8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i64-Tt-3dq">
+                                <rect key="frame" x="160" y="418" width="94" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="home view"/>
+                                <connections>
+                                    <action selector="navigateHomeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XE2-9N-ryF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Qh-G1-pKc" firstAttribute="top" secondItem="i64-Tt-3dq" secondAttribute="bottom" constant="36.5" id="CCE-lr-R6y"/>
+                            <constraint firstItem="i64-Tt-3dq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IJ3-bR-hFS"/>
+                            <constraint firstItem="2Qh-G1-pKc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Xku-mL-mX7"/>
+                            <constraint firstItem="2Qh-G1-pKc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x5K-Xc-99T"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H5b-Uh-a7w"/>
                 </viewController>
@@ -40,8 +53,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0y3-ea-snd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xpr-16-YID">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xpr-16-YID">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D9E06ED28503D340031AA55 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E06EC28503D340031AA55 /* HomeViewController.swift */; };
+		0D9E06EF28503D3B0031AA55 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9E06EE28503D3B0031AA55 /* HomeView.storyboard */; };
 		0DED8AA4284F5646004345F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA3284F5646004345F9 /* AppDelegate.swift */; };
 		0DED8AA6284F5646004345F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA5284F5646004345F9 /* SceneDelegate.swift */; };
 		0DED8AA8284F5646004345F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA7284F5646004345F9 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D9E06EC28503D340031AA55 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0D9E06EE28503D3B0031AA55 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		0DED8AA0284F5646004345F9 /* StudyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED8AA3284F5646004345F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DED8AA5284F5646004345F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				0DED8ADB284F670A004345F9 /* Extensions.swift */,
 				0DED8AA9284F5646004345F9 /* Main.storyboard */,
 				0DED8AD9284F5757004345F9 /* TimerView.storyboard */,
+				0D9E06EE28503D3B0031AA55 /* HomeView.storyboard */,
+				0D9E06EC28503D340031AA55 /* HomeViewController.swift */,
 				0DED8AD7284F5729004345F9 /* TimerViewController.swift */,
 				0DED8AAC284F5646004345F9 /* Assets.xcassets */,
 				0DED8AAE284F5646004345F9 /* LaunchScreen.storyboard */,
@@ -240,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9E06EF28503D3B0031AA55 /* HomeView.storyboard in Resources */,
 				0DED8AB0284F5646004345F9 /* LaunchScreen.storyboard in Resources */,
 				0DED8AAD284F5646004345F9 /* Assets.xcassets in Resources */,
 				0DED8AAB284F5646004345F9 /* Main.storyboard in Resources */,
@@ -273,6 +280,7 @@
 				0DED8AA4284F5646004345F9 /* AppDelegate.swift in Sources */,
 				0DED8ADC284F670A004345F9 /* Extensions.swift in Sources */,
 				0DED8AA6284F5646004345F9 /* SceneDelegate.swift in Sources */,
+				0D9E06ED28503D340031AA55 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

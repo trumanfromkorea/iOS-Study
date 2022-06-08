@@ -20,4 +20,13 @@ class ViewController: UIViewController {
 
         navigationController?.pushViewController(vc, animated: true)
     }
+
+    @IBAction func navigateHomeView(_ sender: Any) {
+        let storyboard = UIStoryboard(name: HomeViewController.storyboard, bundle: nil)
+
+        let vc = storyboard.instantiateViewController(withIdentifier: HomeViewController.identifier) as! HomeViewController
+        vc.title = "Home"
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
