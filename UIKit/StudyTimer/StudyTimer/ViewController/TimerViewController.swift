@@ -81,6 +81,8 @@ class TimerViewController: UIViewController {
             self.stopTimer()
             self.seconds = 0
             self.setTimeLabel()
+            
+            self.navigateStopTimerView()
         }))
 
         present(sheet, animated: true)
@@ -100,5 +102,13 @@ class TimerViewController: UIViewController {
 
     func getDigits(_ time: Int) -> String {
         return time < 10 ? "0\(time)" : "\(time)"
+    }
+    
+    func navigateStopTimerView() {
+        let storyboard = UIStoryboard(name: TimerViewController.storyboard, bundle: nil)
+
+        let vc = storyboard.instantiateViewController(withIdentifier: StopTimerViewController.identifier) as! StopTimerViewController
+
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
