@@ -14,8 +14,8 @@ class TimerViewController: UIViewController {
     var timer: Timer?
     var seconds: Int = 0
 
-    let enabledButtonColor = UIColor(hex: "#556EE6")
-    let disabledButtonColor = UIColor(hex: "#9da9e3")
+    let enabledButtonColor = Theme.mainColor
+    let disabledButtonColor = Theme.supplementColor2
 
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var playPauseButton: UIButton!
