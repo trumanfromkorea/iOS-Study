@@ -158,16 +158,27 @@
                                             <action selector="onTappedFromList:" destination="hiY-vN-UgQ" eventType="touchUpInside" id="fGq-ea-nDj"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4Z-zF-r5x">
+                                        <rect key="frame" x="165" y="434.00000000000006" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="완료"/>
+                                        <connections>
+                                            <action selector="onTappedDoneButton:" destination="hiY-vN-UgQ" eventType="touchUpInside" id="bAh-bV-oX3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="jnA-ZU-FVJ" firstAttribute="top" secondItem="WB9-Qn-OJX" secondAttribute="bottom" constant="10" id="5xF-78-6kf"/>
+                                    <constraint firstAttribute="bottom" secondItem="H4Z-zF-r5x" secondAttribute="bottom" constant="62.666666666666742" id="84o-9c-Usu"/>
+                                    <constraint firstItem="H4Z-zF-r5x" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="165" id="Asr-bt-Qce"/>
                                     <constraint firstItem="jnA-ZU-FVJ" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="DpV-PP-v3j"/>
                                     <constraint firstItem="bgq-cN-qjV" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="JFQ-wG-X7y"/>
                                     <constraint firstItem="zUT-jm-4R9" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="U8w-cY-yJX"/>
                                     <constraint firstItem="zUT-jm-4R9" firstAttribute="top" secondItem="jnA-ZU-FVJ" secondAttribute="bottom" constant="10" id="rjp-eg-Qsp"/>
                                     <constraint firstItem="WB9-Qn-OJX" firstAttribute="top" secondItem="I7L-Lv-ADe" secondAttribute="top" constant="25" id="s61-Jp-FLm"/>
                                     <constraint firstItem="bgq-cN-qjV" firstAttribute="top" secondItem="zUT-jm-4R9" secondAttribute="bottom" constant="40" id="uUu-D3-Vhb"/>
+                                    <constraint firstAttribute="trailing" secondItem="H4Z-zF-r5x" secondAttribute="trailing" constant="164" id="vi0-FM-uJP"/>
                                     <constraint firstAttribute="trailing" secondItem="jnA-ZU-FVJ" secondAttribute="trailing" constant="20" id="xlA-73-AbS"/>
                                 </constraints>
                             </view>

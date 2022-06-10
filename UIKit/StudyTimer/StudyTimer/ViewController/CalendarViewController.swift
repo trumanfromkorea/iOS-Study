@@ -23,9 +23,10 @@ class CalendarViewController: UIViewController {
 
         calendarView.delegate = self
         calendarView.dataSource = self
-        
+
         dummyData()
         configureStates()
+
     }
 
     private func dummyData() {
@@ -44,21 +45,22 @@ class CalendarViewController: UIViewController {
         calendarView.scrollDirection = .vertical
 
         calendarView.appearance.borderRadius = 0
+
+        calendarView.appearance.headerTitleColor = .label
+
+        calendarView.appearance.weekdayTextColor = .label
+        calendarView.appearance.titleDefaultColor = .label
     }
 }
 
 extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
-    
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
         let dateString = dateFormatter.string(from: date)
         var alpha: CGFloat = 0
 
         if let dateInfo = dateList[dateString] {
-            
             let divided = CGFloat(dateInfo.studyTime / 600.0)
-            
-            print(divided)
-            
+
             if divided <= 0.25 {
                 alpha = 0.25
             } else if divided <= 0.5 {
@@ -68,11 +70,10 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource, FSCa
             } else {
                 alpha = 1
             }
-            
+
             return Theme.mainColor.withAlphaComponent(alpha)
         } else {
             return nil
         }
     }
-    
 }

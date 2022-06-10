@@ -23,6 +23,12 @@ class StopTimerViewController: UIViewController {
     @IBAction func onTappedFromList(_ sender: Any) {
     }
 
+    @IBAction func onTappedDoneButton(_ sender: Any) {
+        let viewControllers: [UIViewController] = navigationController!.viewControllers as [UIViewController]
+
+        navigationController?.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+    }
+
     private func configureStates() {
         navigationItem.hidesBackButton = true
 

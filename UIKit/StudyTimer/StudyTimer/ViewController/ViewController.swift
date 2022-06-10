@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: HomeViewController.storyboard, bundle: nil)
 
         let vc = storyboard.instantiateViewController(withIdentifier: HomeViewController.identifier) as! HomeViewController
-        vc.title = "Home"
+        vc.title = "HOME"
 
         navigationController?.pushViewController(vc, animated: true)
     }
