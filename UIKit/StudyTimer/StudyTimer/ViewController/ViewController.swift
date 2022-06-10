@@ -29,4 +29,14 @@ class ViewController: UIViewController {
 
         navigationController?.pushViewController(vc, animated: true)
     }
+
+    @IBAction func navigateWeeklyView(_ sender: Any) {
+        let storyboard = UIStoryboard(name: WeeklyViewController.storyboard, bundle: nil)
+
+        let vc = storyboard.instantiateViewController(withIdentifier: WeeklyViewController.identifier) as! WeeklyViewController
+        
+        vc.title = "Weekly View"
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

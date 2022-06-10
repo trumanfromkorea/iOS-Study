@@ -32,6 +32,15 @@
                                     <action selector="navigateHomeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XE2-9N-ryF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9v-32-jWF">
+                                <rect key="frame" x="110" y="345" width="194" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Weekly View"/>
+                                <connections>
+                                    <action selector="navigateWeeklyView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mte-7r-WUn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
