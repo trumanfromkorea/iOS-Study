@@ -14,6 +14,10 @@
 		0D9D06FD2852FF390072DC8D /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 0D9D06FC2852FF390072DC8D /* Charts */; };
 		0D9E06ED28503D340031AA55 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E06EC28503D340031AA55 /* HomeViewController.swift */; };
 		0D9E06EF28503D3B0031AA55 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9E06EE28503D3B0031AA55 /* HomeView.storyboard */; };
+		0DA46485285331E4003CE149 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA46484285331E4003CE149 /* FSCalendar */; };
+		0DA464872853320A003CE149 /* CalendarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA464862853320A003CE149 /* CalendarView.storyboard */; };
+		0DA4648928533219003CE149 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4648828533219003CE149 /* CalendarViewController.swift */; };
+		0DA4648B285336EC003CE149 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4648A285336EC003CE149 /* DateModel.swift */; };
 		0DED8AA4284F5646004345F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA3284F5646004345F9 /* AppDelegate.swift */; };
 		0DED8AA6284F5646004345F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA5284F5646004345F9 /* SceneDelegate.swift */; };
 		0DED8AA8284F5646004345F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA7284F5646004345F9 /* ViewController.swift */; };
@@ -52,6 +56,9 @@
 		0D9D06F92852FD890072DC8D /* WeeklyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewController.swift; sourceTree = "<group>"; };
 		0D9E06EC28503D340031AA55 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0D9E06EE28503D3B0031AA55 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
+		0DA464862853320A003CE149 /* CalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarView.storyboard; sourceTree = "<group>"; };
+		0DA4648828533219003CE149 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0DA4648A285336EC003CE149 /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		0DED8AA0284F5646004345F9 /* StudyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED8AA3284F5646004345F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DED8AA5284F5646004345F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D9D06FD2852FF390072DC8D /* Charts in Frameworks */,
+				0DA46485285331E4003CE149 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +111,7 @@
 				0DED8AD9284F5757004345F9 /* TimerView.storyboard */,
 				0D9E06EE28503D3B0031AA55 /* HomeView.storyboard */,
 				0D9D06F72852FD7A0072DC8D /* WeeklyView.storyboard */,
+				0DA464862853320A003CE149 /* CalendarView.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +121,7 @@
 			children = (
 				0DED8AA7284F5646004345F9 /* ViewController.swift */,
 				0D9E06EC28503D340031AA55 /* HomeViewController.swift */,
+				0DA4648828533219003CE149 /* CalendarViewController.swift */,
 				0DED8AD7284F5729004345F9 /* TimerViewController.swift */,
 				0D9D06F92852FD890072DC8D /* WeeklyViewController.swift */,
 				0D1A3F322851F73800685D86 /* StopTimerViewController.swift */,
@@ -123,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				0D519F9428525CBE00EAED72 /* ThemeModel.swift */,
+				0DA4648A285336EC003CE149 /* DateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 			name = StudyTimer;
 			packageProductDependencies = (
 				0D9D06FC2852FF390072DC8D /* Charts */,
+				0DA46484285331E4003CE149 /* FSCalendar */,
 			);
 			productName = StudyTimer;
 			productReference = 0DED8AA0284F5646004345F9 /* StudyTimer.app */;
@@ -273,6 +285,7 @@
 			mainGroup = 0DED8A97284F5646004345F9;
 			packageReferences = (
 				0D9D06FB2852FF390072DC8D /* XCRemoteSwiftPackageReference "Charts" */,
+				0DA46483285331E4003CE149 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 0DED8AA1284F5646004345F9 /* Products */;
 			projectDirPath = "";
@@ -295,6 +308,7 @@
 				0DED8AB0284F5646004345F9 /* LaunchScreen.storyboard in Resources */,
 				0DED8AAD284F5646004345F9 /* Assets.xcassets in Resources */,
 				0DED8AAB284F5646004345F9 /* Main.storyboard in Resources */,
+				0DA464872853320A003CE149 /* CalendarView.storyboard in Resources */,
 				0DED8ADA284F5757004345F9 /* TimerView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,12 +334,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA4648928533219003CE149 /* CalendarViewController.swift in Sources */,
 				0DED8AD8284F5729004345F9 /* TimerViewController.swift in Sources */,
 				0DED8AA8284F5646004345F9 /* ViewController.swift in Sources */,
 				0DED8AA4284F5646004345F9 /* AppDelegate.swift in Sources */,
 				0D1A3F332851F73800685D86 /* StopTimerViewController.swift in Sources */,
 				0DED8ADC284F670A004345F9 /* Extensions.swift in Sources */,
 				0D519F9528525CBE00EAED72 /* ThemeModel.swift in Sources */,
+				0DA4648B285336EC003CE149 /* DateModel.swift in Sources */,
 				0D9D06FA2852FD890072DC8D /* WeeklyViewController.swift in Sources */,
 				0DED8AA6284F5646004345F9 /* SceneDelegate.swift in Sources */,
 				0D9E06ED28503D340031AA55 /* HomeViewController.swift in Sources */,
@@ -680,6 +696,14 @@
 				kind = branch;
 			};
 		};
+		0DA46483285331E4003CE149 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -687,6 +711,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0D9D06FB2852FF390072DC8D /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
+		};
+		0DA46484285331E4003CE149 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DA46483285331E4003CE149 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -39,4 +39,14 @@ class ViewController: UIViewController {
 
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func navigateCalendarView(_ sender: Any) {
+        let storyboard = UIStoryboard(name: CalendarViewController.storyboard, bundle: nil)
+
+        let vc = storyboard.instantiateViewController(withIdentifier: CalendarViewController.identifier) as! CalendarViewController
+        
+        vc.title = "Calendar View"
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
