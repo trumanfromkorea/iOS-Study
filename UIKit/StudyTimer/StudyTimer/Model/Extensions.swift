@@ -27,3 +27,19 @@ extension UIColor {
                   alpha: alpha)
     }
 }
+
+extension String {
+    func emojiToImg() -> UIImage? {
+        let size = CGSize(width: 100, height: 100)  // 내가 원하는 이미지 사이즈
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        UIColor.clear.set()
+
+        let rect = CGRect(origin: .zero, size: size)
+        UIRectFill(CGRect(origin: .zero, size: size))
+        (self as AnyObject).draw(in: rect, withAttributes: [.font: UIFont.systemFont(ofSize: 100)])
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return image
+    }
+}

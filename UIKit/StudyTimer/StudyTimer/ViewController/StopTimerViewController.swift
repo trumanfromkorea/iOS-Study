@@ -11,16 +11,29 @@ class StopTimerViewController: UIViewController {
     static let identifier = "StopTimerViewController"
     static let storyboard = "StopTimerView"
 
+    let ratingList = ["😞", "😊", "😆"]
+
+    var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
+    typealias Item = String
+    enum Section {
+        case main
+    }
+
     @IBOutlet var studyContentsTextView: UITextField!
     @IBOutlet var fromListButton: UIButton!
+    @IBOutlet var ratingCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ratingCollectionView.delegate = self
+
         configureStates()
+        configureCollectionView()
     }
 
     @IBAction func onTappedFromList(_ sender: Any) {
+        print("목록에서 선택하기")
     }
 
     @IBAction func onTappedDoneButton(_ sender: Any) {
@@ -36,5 +49,43 @@ class StopTimerViewController: UIViewController {
         fromListButton.backgroundColor = Theme.supplementColor2.withAlphaComponent(0.5)
         fromListButton.titleLabel?.textColor = Theme.mainColor
         fromListButton.tintColor = Theme.mainColor
+    }
+}
+
+extension StopTimerViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("something")
+    }
+
+    private func configureCollectionView() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: ratingCollectionView, cellProvider: { _, indexPath, itemIdentifier in
+            guard let cell = self.ratingCollectionView.dequeueReusableCell(withReuseIdentifier: RatingCell.identifier, for: indexPath) as? RatingCell else {
+                return nil
+            }
+            cell.configure(itemIdentifier)
+            return cell
+        })
+
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(ratingList, toSection: .main)
+        dataSource.apply(snapshot)
+
+        ratingCollectionView.collectionViewLayout = layout()
+    }
+
+    private func layout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
+
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.33))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+
+        let section = NSCollectionLayoutSection(group: group)
+
+        let layout = UICollectionViewCompositionalLayout(section: section)
+
+        return layout
     }
 }

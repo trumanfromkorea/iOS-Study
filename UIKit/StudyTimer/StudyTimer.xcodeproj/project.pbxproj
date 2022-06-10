@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D1A3F332851F73800685D86 /* StopTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A3F322851F73800685D86 /* StopTimerViewController.swift */; };
 		0D519F9528525CBE00EAED72 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D519F9428525CBE00EAED72 /* ThemeModel.swift */; };
+		0D9B04302853B556008CFA41 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9B042F2853B556008CFA41 /* RatingCell.swift */; };
 		0D9D06F82852FD7A0072DC8D /* WeeklyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D06F72852FD7A0072DC8D /* WeeklyView.storyboard */; };
 		0D9D06FA2852FD890072DC8D /* WeeklyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D06F92852FD890072DC8D /* WeeklyViewController.swift */; };
 		0D9D06FD2852FF390072DC8D /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 0D9D06FC2852FF390072DC8D /* Charts */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		0D1A3F322851F73800685D86 /* StopTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTimerViewController.swift; sourceTree = "<group>"; };
 		0D519F9428525CBE00EAED72 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		0D9B042F2853B556008CFA41 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
 		0D9D06F72852FD7A0072DC8D /* WeeklyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeeklyView.storyboard; sourceTree = "<group>"; };
 		0D9D06F92852FD890072DC8D /* WeeklyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewController.swift; sourceTree = "<group>"; };
 		0D9E06EC28503D340031AA55 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				0DED8AD7284F5729004345F9 /* TimerViewController.swift */,
 				0D9D06F92852FD890072DC8D /* WeeklyViewController.swift */,
 				0D1A3F322851F73800685D86 /* StopTimerViewController.swift */,
+				0D9B042F2853B556008CFA41 /* RatingCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 		0D519F9328525CB100EAED72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0DED8ADB284F670A004345F9 /* Extensions.swift */,
 				0D519F9428525CBE00EAED72 /* ThemeModel.swift */,
 				0DA4648A285336EC003CE149 /* DateModel.swift */,
 			);
@@ -166,7 +170,6 @@
 				0D1A3F302851F6B400685D86 /* View */,
 				0DED8AA3284F5646004345F9 /* AppDelegate.swift */,
 				0DED8AA5284F5646004345F9 /* SceneDelegate.swift */,
-				0DED8ADB284F670A004345F9 /* Extensions.swift */,
 				0DED8AAC284F5646004345F9 /* Assets.xcassets */,
 				0DED8AAE284F5646004345F9 /* LaunchScreen.storyboard */,
 				0DED8AB1284F5646004345F9 /* Info.plist */,
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9B04302853B556008CFA41 /* RatingCell.swift in Sources */,
 				0DA4648928533219003CE149 /* CalendarViewController.swift in Sources */,
 				0DED8AD8284F5729004345F9 /* TimerViewController.swift in Sources */,
 				0DED8AA8284F5646004345F9 /* ViewController.swift in Sources */,
