@@ -11,6 +11,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @objc private func buttonEvent() {
+        print("tapped")
+    }
 
     @IBAction func navigateTimerView(_ sender: Any) {
         let storyboard = UIStoryboard(name: TimerViewController.storyboard, bundle: nil)

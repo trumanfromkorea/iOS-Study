@@ -67,11 +67,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+            <point key="canvasLocation" x="541" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TV2-g5-8He">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-N8-mtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0y3-ea-snd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xpr-16-YID">
@@ -83,7 +84,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iqM-Bf-kxv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-N8-mtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-251" y="116"/>
         </scene>
