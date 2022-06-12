@@ -50,6 +50,8 @@ class CalendarViewController: UIViewController {
 
         calendarView.appearance.weekdayTextColor = .label
         calendarView.appearance.titleDefaultColor = .label
+        
+        calendarView.appearance.selectionColor = .label
     }
 }
 

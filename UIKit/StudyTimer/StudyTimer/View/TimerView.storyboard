@@ -168,7 +168,7 @@
                                         </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2eJ-WV-cg1">
-                                        <rect key="frame" x="20" y="202.00000000000006" width="356" height="172"/>
+                                        <rect key="frame" x="0.0" y="202.00000000000006" width="396" height="172"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eiA-GU-Dok">
                                             <size key="itemSize" width="128" height="128"/>
@@ -178,27 +178,20 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RatingCell" id="deh-Jd-PpG" customClass="RatingCell" customModule="StudyTimer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="44.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G2f-Pe-AJc" customClass="RatingCell" customModule="StudyTimer" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="44.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-Oh-MEd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="44.333333333333336"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-Oh-MEd">
+                                                            <rect key="frame" x="21" y="42" width="87" height="44.333333333333336"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="kL2-Oh-MEd" firstAttribute="top" secondItem="G2f-Pe-AJc" secondAttribute="top" id="CJj-uK-nnz"/>
-                                                        <constraint firstAttribute="bottom" secondItem="kL2-Oh-MEd" secondAttribute="bottom" id="NSv-Ak-lTD"/>
-                                                        <constraint firstAttribute="trailing" secondItem="kL2-Oh-MEd" secondAttribute="trailing" id="fsh-T5-vv1"/>
-                                                        <constraint firstItem="kL2-Oh-MEd" firstAttribute="centerX" secondItem="G2f-Pe-AJc" secondAttribute="centerX" id="i2l-Dg-Yve"/>
-                                                        <constraint firstItem="kL2-Oh-MEd" firstAttribute="leading" secondItem="G2f-Pe-AJc" secondAttribute="leading" id="jF5-5E-3VX"/>
-                                                        <constraint firstItem="kL2-Oh-MEd" firstAttribute="centerY" secondItem="G2f-Pe-AJc" secondAttribute="centerY" id="xdt-xA-DUS"/>
-                                                    </constraints>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
@@ -212,13 +205,13 @@
                                 <constraints>
                                     <constraint firstItem="jnA-ZU-FVJ" firstAttribute="top" secondItem="WB9-Qn-OJX" secondAttribute="bottom" constant="10" id="5xF-78-6kf"/>
                                     <constraint firstAttribute="bottom" secondItem="H4Z-zF-r5x" secondAttribute="bottom" constant="62.666666666666742" id="84o-9c-Usu"/>
-                                    <constraint firstItem="H4Z-zF-r5x" firstAttribute="top" secondItem="2eJ-WV-cg1" secondAttribute="bottom" constant="60" id="942-Wk-sUs"/>
+                                    <constraint firstItem="H4Z-zF-r5x" firstAttribute="top" secondItem="2eJ-WV-cg1" secondAttribute="bottom" constant="60" id="8sP-co-BuM"/>
                                     <constraint firstItem="H4Z-zF-r5x" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="165" id="Asr-bt-Qce"/>
                                     <constraint firstItem="jnA-ZU-FVJ" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="DpV-PP-v3j"/>
                                     <constraint firstItem="bgq-cN-qjV" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="JFQ-wG-X7y"/>
-                                    <constraint firstItem="2eJ-WV-cg1" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" symbolic="YES" id="OTc-eE-Xfd"/>
+                                    <constraint firstItem="2eJ-WV-cg1" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" id="OTc-eE-Xfd"/>
                                     <constraint firstItem="zUT-jm-4R9" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="U8w-cY-yJX"/>
-                                    <constraint firstAttribute="trailing" secondItem="2eJ-WV-cg1" secondAttribute="trailing" constant="20" symbolic="YES" id="eoj-Dm-jx6"/>
+                                    <constraint firstAttribute="trailing" secondItem="2eJ-WV-cg1" secondAttribute="trailing" id="eoj-Dm-jx6"/>
                                     <constraint firstItem="zUT-jm-4R9" firstAttribute="top" secondItem="jnA-ZU-FVJ" secondAttribute="bottom" constant="10" id="rjp-eg-Qsp"/>
                                     <constraint firstItem="WB9-Qn-OJX" firstAttribute="top" secondItem="I7L-Lv-ADe" secondAttribute="top" constant="25" id="s61-Jp-FLm"/>
                                     <constraint firstItem="2eJ-WV-cg1" firstAttribute="top" secondItem="bgq-cN-qjV" secondAttribute="bottom" constant="10" id="u12-LY-M7A"/>
@@ -261,7 +254,7 @@
     <resources>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
