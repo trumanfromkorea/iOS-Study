@@ -12,6 +12,7 @@ class StopTimerViewController: UIViewController {
     static let storyboard = "StopTimerView"
 
     let ratingList = ["😞", "😊", "😆"]
+    var studyTime = 0
 
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     typealias Item = String
@@ -19,12 +20,15 @@ class StopTimerViewController: UIViewController {
         case main
     }
 
+    @IBOutlet weak var studyTimeLabel: UILabel!
     @IBOutlet var studyContentsTextView: UITextField!
     @IBOutlet var fromListButton: UIButton!
     @IBOutlet var ratingCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(studyTime)
 
         ratingCollectionView.delegate = self
 
@@ -49,12 +53,14 @@ class StopTimerViewController: UIViewController {
         fromListButton.backgroundColor = Theme.supplementColor2.withAlphaComponent(0.5)
         fromListButton.titleLabel?.textColor = Theme.mainColor
         fromListButton.tintColor = Theme.mainColor
+        
+        studyTimeLabel.text = TimeModel.getTimeFromSeconds(seconds: studyTime)
     }
 }
 
 extension StopTimerViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("something")
+        print("tapped")
     }
 
     private func configureCollectionView() {
@@ -77,6 +83,7 @@ extension StopTimerViewController: UICollectionViewDelegate {
     private func layout() -> UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
 
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.33))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)

@@ -79,7 +79,6 @@ class TimerViewController: UIViewController {
         sheet.addAction(UIAlertAction(title: "아니오", style: .default))
         sheet.addAction(UIAlertAction(title: "예", style: .default, handler: { _ in
             self.stopTimer()
-            self.seconds = 0
             self.setTimeLabel()
             
             self.navigateStopTimerView()
@@ -94,20 +93,16 @@ class TimerViewController: UIViewController {
     }
 
     func setTimeLabel() {
-        let min = seconds / 60
-        let sec = seconds % 60
-
-        timerLabel.text = getDigits(min) + ":" + getDigits(sec)
+        timerLabel.text = TimeModel.getTimeFromSeconds(seconds: seconds)
     }
 
-    func getDigits(_ time: Int) -> String {
-        return time < 10 ? "0\(time)" : "\(time)"
-    }
-    
     func navigateStopTimerView() {
         let storyboard = UIStoryboard(name: TimerViewController.storyboard, bundle: nil)
 
         let vc = storyboard.instantiateViewController(withIdentifier: StopTimerViewController.identifier) as! StopTimerViewController
+        vc.studyTime = seconds
+        
+        self.seconds = 0
 
         navigationController?.pushViewController(vc, animated: true)
     }

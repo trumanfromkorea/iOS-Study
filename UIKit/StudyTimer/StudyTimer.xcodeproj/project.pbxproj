@@ -25,7 +25,7 @@
 		0DA46485285331E4003CE149 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA46484285331E4003CE149 /* FSCalendar */; };
 		0DA464872853320A003CE149 /* CalendarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA464862853320A003CE149 /* CalendarView.storyboard */; };
 		0DA4648928533219003CE149 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4648828533219003CE149 /* CalendarViewController.swift */; };
-		0DA4648B285336EC003CE149 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4648A285336EC003CE149 /* DateModel.swift */; };
+		0DA4648B285336EC003CE149 /* DateTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4648A285336EC003CE149 /* DateTimeModel.swift */; };
 		0DED8AA4284F5646004345F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA3284F5646004345F9 /* AppDelegate.swift */; };
 		0DED8AA6284F5646004345F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA5284F5646004345F9 /* SceneDelegate.swift */; };
 		0DED8AA8284F5646004345F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8AA7284F5646004345F9 /* ViewController.swift */; };
@@ -70,7 +70,7 @@
 		0D9E06EE28503D3B0031AA55 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		0DA464862853320A003CE149 /* CalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarView.storyboard; sourceTree = "<group>"; };
 		0DA4648828533219003CE149 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		0DA4648A285336EC003CE149 /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
+		0DA4648A285336EC003CE149 /* DateTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeModel.swift; sourceTree = "<group>"; };
 		0DED8AA0284F5646004345F9 /* StudyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED8AA3284F5646004345F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DED8AA5284F5646004345F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			children = (
 				0DED8ADB284F670A004345F9 /* Extensions.swift */,
 				0D519F9428525CBE00EAED72 /* ThemeModel.swift */,
-				0DA4648A285336EC003CE149 /* DateModel.swift */,
+				0DA4648A285336EC003CE149 /* DateTimeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 				0D1A3F332851F73800685D86 /* StopTimerViewController.swift in Sources */,
 				0DED8ADC284F670A004345F9 /* Extensions.swift in Sources */,
 				0D519F9528525CBE00EAED72 /* ThemeModel.swift in Sources */,
-				0DA4648B285336EC003CE149 /* DateModel.swift in Sources */,
+				0DA4648B285336EC003CE149 /* DateTimeModel.swift in Sources */,
 				0D9D06FA2852FD890072DC8D /* WeeklyViewController.swift in Sources */,
 				0DED8AA6284F5646004345F9 /* SceneDelegate.swift in Sources */,
 				0D9E06ED28503D340031AA55 /* HomeViewController.swift in Sources */,

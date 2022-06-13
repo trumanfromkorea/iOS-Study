@@ -178,20 +178,25 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RatingCell" id="deh-Jd-PpG" customClass="RatingCell" customModule="StudyTimer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="44.333333333333336"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G2f-Pe-AJc" customClass="RatingCell" customModule="StudyTimer" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G2f-Pe-AJc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="44.333333333333336"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-Oh-MEd">
-                                                            <rect key="frame" x="21" y="42" width="87" height="44.333333333333336"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-Oh-MEd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="44.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="kL2-Oh-MEd" secondAttribute="bottom" id="BXW-8r-Xxc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kL2-Oh-MEd" secondAttribute="trailing" id="Bd1-41-knk"/>
+                                                        <constraint firstItem="kL2-Oh-MEd" firstAttribute="top" secondItem="G2f-Pe-AJc" secondAttribute="top" id="X8F-zm-V08"/>
+                                                        <constraint firstItem="kL2-Oh-MEd" firstAttribute="leading" secondItem="G2f-Pe-AJc" secondAttribute="leading" id="cmN-9R-4KT"/>
+                                                    </constraints>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
@@ -205,9 +210,9 @@
                                 <constraints>
                                     <constraint firstItem="jnA-ZU-FVJ" firstAttribute="top" secondItem="WB9-Qn-OJX" secondAttribute="bottom" constant="10" id="5xF-78-6kf"/>
                                     <constraint firstAttribute="bottom" secondItem="H4Z-zF-r5x" secondAttribute="bottom" constant="62.666666666666742" id="84o-9c-Usu"/>
-                                    <constraint firstItem="H4Z-zF-r5x" firstAttribute="top" secondItem="2eJ-WV-cg1" secondAttribute="bottom" constant="60" id="8sP-co-BuM"/>
                                     <constraint firstItem="H4Z-zF-r5x" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="165" id="Asr-bt-Qce"/>
                                     <constraint firstItem="jnA-ZU-FVJ" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="DpV-PP-v3j"/>
+                                    <constraint firstItem="H4Z-zF-r5x" firstAttribute="top" secondItem="2eJ-WV-cg1" secondAttribute="bottom" constant="60" id="F8Q-qu-M0J"/>
                                     <constraint firstItem="bgq-cN-qjV" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="JFQ-wG-X7y"/>
                                     <constraint firstItem="2eJ-WV-cg1" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" id="OTc-eE-Xfd"/>
                                     <constraint firstItem="zUT-jm-4R9" firstAttribute="leading" secondItem="I7L-Lv-ADe" secondAttribute="leading" constant="20" id="U8w-cY-yJX"/>
@@ -244,6 +249,7 @@
                         <outlet property="fromListButton" destination="zUT-jm-4R9" id="eHX-kF-Ukd"/>
                         <outlet property="ratingCollectionView" destination="2eJ-WV-cg1" id="hq9-z6-ApH"/>
                         <outlet property="studyContentsTextView" destination="jnA-ZU-FVJ" id="On9-Xk-3WU"/>
+                        <outlet property="studyTimeLabel" destination="K87-BQ-OKq" id="Kbm-zE-pO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAP-Ll-taI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
