@@ -19,6 +19,7 @@
 		0DBB280F2857A52A001FC031 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBB280E2857A52A001FC031 /* SignUp.storyboard */; };
 		0DBB28112857A534001FC031 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB28102857A534001FC031 /* SignUpViewController.swift */; };
 		0DBB28142857A7D3001FC031 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0DBB28132857A7D3001FC031 /* Alamofire */; };
+		0DBB28162857A801001FC031 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB28152857A801001FC031 /* ServerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		0DBB28012857A46E001FC031 /* AnthillUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnthillUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0DBB280E2857A52A001FC031 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		0DBB28102857A534001FC031 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0DBB28152857A801001FC031 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				0DBB27E02857A46B001FC031 /* SceneDelegate.swift */,
 				0DBB27E22857A46B001FC031 /* ViewController.swift */,
 				0DBB28102857A534001FC031 /* SignUpViewController.swift */,
+				0DBB28152857A801001FC031 /* ServerModel.swift */,
 				0DBB27E42857A46B001FC031 /* Main.storyboard */,
 				0DBB280E2857A52A001FC031 /* SignUp.storyboard */,
 				0DBB27E72857A46E001FC031 /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 			files = (
 				0DBB27E32857A46B001FC031 /* ViewController.swift in Sources */,
 				0DBB27DF2857A46B001FC031 /* AppDelegate.swift in Sources */,
+				0DBB28162857A801001FC031 /* ServerModel.swift in Sources */,
 				0DBB28112857A534001FC031 /* SignUpViewController.swift in Sources */,
 				0DBB27E12857A46B001FC031 /* SceneDelegate.swift in Sources */,
 			);
