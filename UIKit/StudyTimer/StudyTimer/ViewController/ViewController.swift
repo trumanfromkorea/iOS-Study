@@ -15,7 +15,14 @@ class ViewController: UIViewController {
     @objc private func buttonEvent() {
         print("tapped")
     }
+    @IBAction func navigateAuthView(_ sender: Any) {
+        let storyboard = UIStoryboard(name: SignInViewController.storyboard, bundle: nil)
 
+        let vc = storyboard.instantiateViewController(withIdentifier: SignInViewController.identifier) as! SignInViewController
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func navigateTimerView(_ sender: Any) {
         let storyboard = UIStoryboard(name: TimerViewController.storyboard, bundle: nil)
 

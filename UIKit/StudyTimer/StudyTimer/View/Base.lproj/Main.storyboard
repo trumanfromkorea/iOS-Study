@@ -19,8 +19,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-tY-Bvg">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLk-q4-oiN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="144.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="AuthView"/>
+                                        <connections>
+                                            <action selector="navigateAuthView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9s0-rs-U6e"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qh-G1-pKc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="180.5"/>
+                                        <rect key="frame" x="0.0" y="144.5" width="414" height="144.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="timer view"/>
                                         <connections>
@@ -28,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i64-Tt-3dq">
-                                        <rect key="frame" x="0.0" y="180.5" width="414" height="180.5"/>
+                                        <rect key="frame" x="0.0" y="289" width="414" height="144"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="home view"/>
                                         <connections>
@@ -36,7 +44,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9v-32-jWF">
-                                        <rect key="frame" x="0.0" y="361" width="414" height="180.5"/>
+                                        <rect key="frame" x="0.0" y="433" width="414" height="144.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Weekly View"/>
                                         <connections>
@@ -44,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wy-kw-n00">
-                                        <rect key="frame" x="0.0" y="541.5" width="414" height="180.5"/>
+                                        <rect key="frame" x="0.0" y="577.5" width="414" height="144.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Calendar View"/>
                                         <connections>
@@ -72,7 +80,6 @@
         <!--Navigation Controller-->
         <scene sceneID="TV2-g5-8He">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-N8-mtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0y3-ea-snd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xpr-16-YID">
@@ -84,8 +91,9 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iqM-Bf-kxv"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-N8-mtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-251" y="116"/>
+            <point key="canvasLocation" x="-152" y="116"/>
         </scene>
     </scenes>
     <resources>

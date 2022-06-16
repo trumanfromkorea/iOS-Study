@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0D1A3F332851F73800685D86 /* StopTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A3F322851F73800685D86 /* StopTimerViewController.swift */; };
-		0D4117D128545F7F00852278 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4117D028545F7F00852278 /* SignInView.storyboard */; };
-		0D4117D328545F9E00852278 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4117D228545F9E00852278 /* SignInViewController.swift */; };
+		0D28EF6A285B15B300E6AFF4 /* AuthView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D28EF69285B15B300E6AFF4 /* AuthView.storyboard */; };
+		0D28EF6C285B15C500E6AFF4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28EF6B285B15C500E6AFF4 /* SignInViewController.swift */; };
+		0D28EF6E285B15D700E6AFF4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28EF6D285B15D700E6AFF4 /* SignUpViewController.swift */; };
+		0D28EF70285B1B9B00E6AFF4 /* ValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28EF6F285B1B9B00E6AFF4 /* ValidationModel.swift */; };
 		0D4117D5285462AA00852278 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D4117D4285462AA00852278 /* GoogleService-Info.plist */; };
 		0D519F9528525CBE00EAED72 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D519F9428525CBE00EAED72 /* ThemeModel.swift */; };
 		0D9B04302853B556008CFA41 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9B042F2853B556008CFA41 /* RatingCell.swift */; };
@@ -59,8 +61,10 @@
 
 /* Begin PBXFileReference section */
 		0D1A3F322851F73800685D86 /* StopTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTimerViewController.swift; sourceTree = "<group>"; };
-		0D4117D028545F7F00852278 /* SignInView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInView.storyboard; sourceTree = "<group>"; };
-		0D4117D228545F9E00852278 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0D28EF69285B15B300E6AFF4 /* AuthView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthView.storyboard; sourceTree = "<group>"; };
+		0D28EF6B285B15C500E6AFF4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0D28EF6D285B15D700E6AFF4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0D28EF6F285B1B9B00E6AFF4 /* ValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationModel.swift; sourceTree = "<group>"; };
 		0D4117D4285462AA00852278 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D519F9428525CBE00EAED72 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		0D9B042F2853B556008CFA41 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
@@ -125,7 +129,7 @@
 			children = (
 				0DED8AA9284F5646004345F9 /* Main.storyboard */,
 				0DED8AD9284F5757004345F9 /* TimerView.storyboard */,
-				0D4117D028545F7F00852278 /* SignInView.storyboard */,
+				0D28EF69285B15B300E6AFF4 /* AuthView.storyboard */,
 				0D9E06EE28503D3B0031AA55 /* HomeView.storyboard */,
 				0D9D06F72852FD7A0072DC8D /* WeeklyView.storyboard */,
 				0DA464862853320A003CE149 /* CalendarView.storyboard */,
@@ -140,9 +144,10 @@
 				0D9E06EC28503D340031AA55 /* HomeViewController.swift */,
 				0DA4648828533219003CE149 /* CalendarViewController.swift */,
 				0DED8AD7284F5729004345F9 /* TimerViewController.swift */,
+				0D28EF6B285B15C500E6AFF4 /* SignInViewController.swift */,
+				0D28EF6D285B15D700E6AFF4 /* SignUpViewController.swift */,
 				0D9D06F92852FD890072DC8D /* WeeklyViewController.swift */,
 				0D1A3F322851F73800685D86 /* StopTimerViewController.swift */,
-				0D4117D228545F9E00852278 /* SignInViewController.swift */,
 				0D9B042F2853B556008CFA41 /* RatingCell.swift */,
 			);
 			path = ViewController;
@@ -154,6 +159,7 @@
 				0DED8ADB284F670A004345F9 /* Extensions.swift */,
 				0D519F9428525CBE00EAED72 /* ThemeModel.swift */,
 				0DA4648A285336EC003CE149 /* DateTimeModel.swift */,
+				0D28EF6F285B1B9B00E6AFF4 /* ValidationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,8 +341,8 @@
 				0DED8AAD284F5646004345F9 /* Assets.xcassets in Resources */,
 				0DED8AAB284F5646004345F9 /* Main.storyboard in Resources */,
 				0DA464872853320A003CE149 /* CalendarView.storyboard in Resources */,
+				0D28EF6A285B15B300E6AFF4 /* AuthView.storyboard in Resources */,
 				0DED8ADA284F5757004345F9 /* TimerView.storyboard in Resources */,
-				0D4117D128545F7F00852278 /* SignInView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,11 +370,13 @@
 				0D9B04302853B556008CFA41 /* RatingCell.swift in Sources */,
 				0DA4648928533219003CE149 /* CalendarViewController.swift in Sources */,
 				0DED8AD8284F5729004345F9 /* TimerViewController.swift in Sources */,
+				0D28EF70285B1B9B00E6AFF4 /* ValidationModel.swift in Sources */,
 				0DED8AA8284F5646004345F9 /* ViewController.swift in Sources */,
 				0DED8AA4284F5646004345F9 /* AppDelegate.swift in Sources */,
-				0D4117D328545F9E00852278 /* SignInViewController.swift in Sources */,
+				0D28EF6C285B15C500E6AFF4 /* SignInViewController.swift in Sources */,
 				0D1A3F332851F73800685D86 /* StopTimerViewController.swift in Sources */,
 				0DED8ADC284F670A004345F9 /* Extensions.swift in Sources */,
+				0D28EF6E285B15D700E6AFF4 /* SignUpViewController.swift in Sources */,
 				0D519F9528525CBE00EAED72 /* ThemeModel.swift in Sources */,
 				0DA4648B285336EC003CE149 /* DateTimeModel.swift in Sources */,
 				0D9D06FA2852FD890072DC8D /* WeeklyViewController.swift in Sources */,
@@ -557,6 +565,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -586,6 +595,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
