@@ -140,15 +140,12 @@
 		0D1A3F312851F6C300685D86 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0DFD22C6285C8E93003449F2 /* Weekly */,
+				0DFD22C5285C8E8B003449F2 /* Calendar */,
+				0DFD22C4285C8E7B003449F2 /* Timer */,
+				0DFD22C3285C8E6F003449F2 /* Auth */,
+				0DFD22C2285C8E61003449F2 /* Home */,
 				0DED8AA7284F5646004345F9 /* ViewController.swift */,
-				0D9E06EC28503D340031AA55 /* HomeViewController.swift */,
-				0DA4648828533219003CE149 /* CalendarViewController.swift */,
-				0DED8AD7284F5729004345F9 /* TimerViewController.swift */,
-				0D28EF6B285B15C500E6AFF4 /* SignInViewController.swift */,
-				0D28EF6D285B15D700E6AFF4 /* SignUpViewController.swift */,
-				0D9D06F92852FD890072DC8D /* WeeklyViewController.swift */,
-				0D1A3F322851F73800685D86 /* StopTimerViewController.swift */,
-				0D9B042F2853B556008CFA41 /* RatingCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -215,6 +212,49 @@
 				0DED8AC6284F5646004345F9 /* StudyTimerUITestsLaunchTests.swift */,
 			);
 			path = StudyTimerUITests;
+			sourceTree = "<group>";
+		};
+		0DFD22C2285C8E61003449F2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0D9E06EC28503D340031AA55 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0DFD22C3285C8E6F003449F2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0D28EF6B285B15C500E6AFF4 /* SignInViewController.swift */,
+				0D28EF6D285B15D700E6AFF4 /* SignUpViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0DFD22C4285C8E7B003449F2 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				0DED8AD7284F5729004345F9 /* TimerViewController.swift */,
+				0D1A3F322851F73800685D86 /* StopTimerViewController.swift */,
+				0D9B042F2853B556008CFA41 /* RatingCell.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		0DFD22C5285C8E8B003449F2 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				0DA4648828533219003CE149 /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		0DFD22C6285C8E93003449F2 /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D06F92852FD890072DC8D /* WeeklyViewController.swift */,
+			);
+			path = Weekly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
