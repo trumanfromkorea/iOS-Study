@@ -17,27 +17,19 @@ class SignUpViewController: UIViewController {
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var confirmPasswordField: UITextField!
-    @IBOutlet weak var confirmPasswordLabel: UILabel!
-    
+    @IBOutlet var confirmPasswordLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         passwordField.addTarget(self, action: #selector(passwordFieldListener(_:)), for: .editingChanged)
         confirmPasswordField.addTarget(self, action: #selector(passwordFieldListener(_:)), for: .editingChanged)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-
-//        handle = Auth.auth().addStateDidChangeListener({ auth, user in
-//          // user state event listener
-//        })
     }
 
     @IBAction func onTappedDoneButton(_ sender: Any) {
         validateInput()
     }
-    
+
     @objc func passwordFieldListener(_ sender: Any?) {
         if passwordField.text == confirmPasswordField.text {
             confirmPasswordLabel.text = ""
@@ -48,25 +40,20 @@ class SignUpViewController: UIViewController {
     }
 
     private func validateInput() {
-        if emailField.text == nil || passwordField == nil || confirmPasswordField == nil {
-            return
-        }
-
-        if !Validation.email(emailField.text!) {
+        if !Validation.email(emailField.text) {
             print("invalid email")
-
-        } else if !Validation.password(passwordField.text!) {
+        } else if !Validation.password(passwordField.text) {
             print("invalid password")
         } else if passwordField.text != confirmPasswordField.text {
             print("password incorrect")
         } else {
-            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { authResult, error in
+            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { _, error in
                 if let error = error {
-                    print(">> FB Auth Error : \(error)")
-                    return
+                    print(">> FB Sign Up Error : \(error)")
+                    
+                } else {
+                    print("Sign Up Complete")
                 }
-                
-                print(authResult?.additionalUserInfo!)
             }
         }
     }

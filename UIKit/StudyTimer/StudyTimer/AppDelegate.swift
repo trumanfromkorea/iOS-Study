@@ -5,8 +5,9 @@
 //  Created by 장재훈 on 2022/06/07.
 //
 
-import UIKit
+import FirebaseAuth
 import FirebaseCore
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure Firebase
         FirebaseApp.configure()
         // Override point for customization after application launch.
+
         return true
     }
 

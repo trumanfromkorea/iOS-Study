@@ -5,17 +5,31 @@
 //  Created by 장재훈 on 2022/06/07.
 //
 
+import FirebaseAuth
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+
+        // 사용자 로그인 여부 확인
+        var mainStoryboard: UIStoryboard?
+        var protectedPage: UIViewController?
+
+        if Auth.auth().currentUser != nil {
+            mainStoryboard = UIStoryboard(name: HomeViewController.storyboard, bundle: nil)
+            protectedPage = mainStoryboard!.instantiateViewController(withIdentifier: HomeViewController.identifier) as! HomeViewController
+        } else {
+            mainStoryboard = UIStoryboard(name: SignInViewController.storyboard, bundle: nil)
+            protectedPage = mainStoryboard!.instantiateViewController(withIdentifier: SignInViewController.identifier) as! SignInViewController
+        }
+        window!.rootViewController = protectedPage
+        window!.makeKeyAndVisible()
+
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -46,7 +60,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0y3-ea-snd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,92 +8,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Debug View-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StudyTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-tY-Bvg">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLk-q4-oiN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="144.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="AuthView"/>
-                                        <connections>
-                                            <action selector="navigateAuthView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9s0-rs-U6e"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qh-G1-pKc">
-                                        <rect key="frame" x="0.0" y="144.5" width="414" height="144.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="timer view"/>
-                                        <connections>
-                                            <action selector="navigateTimerView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7BR-Mj-5H8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i64-Tt-3dq">
-                                        <rect key="frame" x="0.0" y="289" width="414" height="144"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="home view"/>
-                                        <connections>
-                                            <action selector="navigateHomeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XE2-9N-ryF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9v-32-jWF">
-                                        <rect key="frame" x="0.0" y="433" width="414" height="144.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Weekly View"/>
-                                        <connections>
-                                            <action selector="navigateWeeklyView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mte-7r-WUn"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wy-kw-n00">
-                                        <rect key="frame" x="0.0" y="577.5" width="414" height="144.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Calendar View"/>
-                                        <connections>
-                                            <action selector="navigateCalendarView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSv-Xo-8q7"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4g4-tY-Bvg" secondAttribute="trailing" id="J2q-rN-ApZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4g4-tY-Bvg" secondAttribute="bottom" id="T10-Cg-dCD"/>
-                            <constraint firstItem="4g4-tY-Bvg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bCU-lW-ii5"/>
-                            <constraint firstItem="4g4-tY-Bvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zdk-DG-Mq1"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Debug View" id="H5b-Uh-a7w"/>
+                    <navigationItem key="navigationItem" id="H5b-Uh-a7w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="541" y="116"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="TV2-g5-8He">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0y3-ea-snd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xpr-16-YID">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iqM-Bf-kxv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-N8-mtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-152" y="116"/>
         </scene>
     </scenes>
     <resources>

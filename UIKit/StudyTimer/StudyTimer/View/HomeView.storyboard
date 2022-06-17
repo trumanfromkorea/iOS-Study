@@ -117,8 +117,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6G5-K7-CcC" secondAttribute="trailing" constant="15" id="FXn-QQ-dWK"/>
-                            <constraint firstItem="6G5-K7-CcC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="JGN-OL-3P0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6G5-K7-CcC" secondAttribute="bottom" constant="30" id="NjL-OR-eAu"/>
+                            <constraint firstItem="6G5-K7-CcC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="oqp-km-Faf"/>
                             <constraint firstItem="6G5-K7-CcC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="tku-pD-jk9"/>
                         </constraints>
                     </view>

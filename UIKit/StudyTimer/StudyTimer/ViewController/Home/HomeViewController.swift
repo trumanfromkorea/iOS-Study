@@ -22,8 +22,32 @@ class HomeViewController: UIViewController {
         weeklyView.layer.cornerRadius = 10
         calendarView.layer.cornerRadius = 10
 
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        navigationItem.hidesBackButton = true
+        
         configureTouchEvents()
     }
+//
+//    private func addNaviBar() {
+//
+//        // safe area
+//        var statusBarHeight: CGFloat = 0
+//        statusBarHeight = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+//
+//        // navigationBar
+//        let naviBar = UINavigationBar(frame: .init(x: 0, y: statusBarHeight, width: view.frame.width, height: statusBarHeight))
+//        naviBar.isTranslucent = false
+//        naviBar.backgroundColor = .systemBackground
+//
+//        let naviItem = UINavigationItem(title: "title")
+//        naviItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapDoneButton))
+//        naviBar.items = [naviItem]
+//
+//        view.addSubview(naviBar)
+//    }
+//    @objc func didTapDoneButton() {
+//        print("hello")
+//    }
 
     private func configureTouchEvents() {
         let studyViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapStudyView))
@@ -48,7 +72,7 @@ class HomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: WeeklyViewController.storyboard, bundle: nil)
 
         let vc = storyboard.instantiateViewController(withIdentifier: WeeklyViewController.identifier) as! WeeklyViewController
-        
+
         vc.title = "Weekly View"
 
         navigationController?.pushViewController(vc, animated: true)
@@ -58,7 +82,7 @@ class HomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: CalendarViewController.storyboard, bundle: nil)
 
         let vc = storyboard.instantiateViewController(withIdentifier: CalendarViewController.identifier) as! CalendarViewController
-        
+
         vc.title = "Calendar View"
 
         navigationController?.pushViewController(vc, animated: true)
