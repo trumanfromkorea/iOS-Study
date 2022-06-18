@@ -16,6 +16,7 @@
 		0DC412B6285E3B0300219C8A /* CircluarProgressBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC412B5285E3B0300219C8A /* CircluarProgressBarTests.swift */; };
 		0DC412C0285E3B0300219C8A /* CircluarProgressBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC412BF285E3B0300219C8A /* CircluarProgressBarUITests.swift */; };
 		0DC412C2285E3B0300219C8A /* CircluarProgressBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC412C1285E3B0300219C8A /* CircluarProgressBarUITestsLaunchTests.swift */; };
+		0DC412CF285E3B4F00219C8A /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC412CE285E3B4F00219C8A /* CircularProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0DC412BB285E3B0300219C8A /* CircluarProgressBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircluarProgressBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC412BF285E3B0300219C8A /* CircluarProgressBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircluarProgressBarUITests.swift; sourceTree = "<group>"; };
 		0DC412C1285E3B0300219C8A /* CircluarProgressBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircluarProgressBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DC412CE285E3B4F00219C8A /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				0DC4129E285E3B0300219C8A /* AppDelegate.swift */,
 				0DC412A0285E3B0300219C8A /* SceneDelegate.swift */,
 				0DC412A2285E3B0300219C8A /* ViewController.swift */,
+				0DC412CE285E3B4F00219C8A /* CircularProgressBarView.swift */,
 				0DC412A4285E3B0300219C8A /* Main.storyboard */,
 				0DC412A7285E3B0300219C8A /* Assets.xcassets */,
 				0DC412A9285E3B0300219C8A /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				0DC412A3285E3B0300219C8A /* ViewController.swift in Sources */,
 				0DC4129F285E3B0300219C8A /* AppDelegate.swift in Sources */,
+				0DC412CF285E3B4F00219C8A /* CircularProgressBarView.swift in Sources */,
 				0DC412A1285E3B0300219C8A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
