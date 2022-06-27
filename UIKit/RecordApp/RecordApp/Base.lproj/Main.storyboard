@@ -116,19 +116,34 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="record.circle" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="record.circle.fill" catalog="system" symbolScale="large"/>
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onTappedRecordButton:" destination="mQ8-P1-EMb" eventType="touchUpInside" id="M8y-2i-Biv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfp-0A-67k">
+                                <rect key="frame" x="182" y="505" width="50" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="onTappedPlayButton:" destination="mQ8-P1-EMb" eventType="touchUpInside" id="dNx-1I-Y3m"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jO3-ZZ-jUP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Kfp-0A-67k" firstAttribute="top" secondItem="xh1-oD-z4n" secondAttribute="bottom" constant="27" id="Dg5-lX-D2k"/>
+                            <constraint firstItem="Kfp-0A-67k" firstAttribute="leading" secondItem="xh1-oD-z4n" secondAttribute="leading" id="S1n-HG-fg3"/>
                             <constraint firstItem="xh1-oD-z4n" firstAttribute="centerX" secondItem="jO3-ZZ-jUP" secondAttribute="centerX" id="XNo-fC-62F"/>
+                            <constraint firstItem="Kfp-0A-67k" firstAttribute="trailing" secondItem="xh1-oD-z4n" secondAttribute="trailing" id="iFf-OE-Pqk"/>
                             <constraint firstItem="xh1-oD-z4n" firstAttribute="centerY" secondItem="jO3-ZZ-jUP" secondAttribute="centerY" id="nP9-YK-g8a"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="Kfp-0A-67k" id="cHp-oD-uMg"/>
                         <outlet property="recordButton" destination="xh1-oD-z4n" id="tXp-Vo-trJ"/>
                     </connections>
                 </viewController>
@@ -153,8 +168,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="record.circle" catalog="system" width="128" height="121"/>
+        <image name="record.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
