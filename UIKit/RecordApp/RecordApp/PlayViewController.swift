@@ -11,10 +11,15 @@ class PlayViewController: UIViewController {
     
     static let identifier = "PlayViewController"
     static let storyboard = "Main"
+    
+    var audioFile: AudioCellItem!
+    var fileName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        fileName = "\(audioFile.title)+\(audioFile.duration).m4a"
+        print(fileName)
     }
     
 }

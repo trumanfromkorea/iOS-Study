@@ -19,6 +19,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
 
+    var fileName: String = ""
     var audioFile: URL!
     var audioPlayer: AVAudioPlayer!
 
@@ -85,8 +86,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     }
 
     private func startRecording() {
-        let audioFileName = getDocumentsDirectory().appendingPathComponent("recording.m4a")
-        audioFile = audioFileName
+        fileName = dateFormatter.string(from: Date())
+        audioFile = getDocumentsDirectory().appendingPathComponent("recording.m4a")
 
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -96,7 +97,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
         ]
 
         do {
-            audioRecorder = try AVAudioRecorder(url: audioFileName, settings: settings)
+            audioRecorder = try AVAudioRecorder(url: audioFile, settings: settings)
             audioRecorder.delegate = self
             audioRecorder.record()
 
@@ -117,6 +118,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
         audioRecorder = nil
 
         if success {
+            initPlayer()
+            fileName += "+\(Int(audioPlayer.duration))"
             print("success")
         } else {
             print("failed")
@@ -135,26 +138,26 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
         let storage = Storage.storage()
         let storageRef = storage.reference()
 
-        let audioRef = storageRef.child("audio.m4a")
+        let audioRef = storageRef.child("audio/\(fileName).m4a")
 
         do {
             let data = try Data(contentsOf: audioFile)
 
-            let uploadTask = audioRef.putData(data, metadata: nil) { metadata, _ in
-                guard let metadata = metadata else {
+            // upload task_
+            audioRef.putData(data, metadata: nil) { metadata, _ in
+                guard metadata != nil else {
                     print("metadata failed")
                     return
                 }
 
-                let size = metadata.size
-                audioRef.downloadURL { url, _ in
-                    guard let downloadURL = url else {
-                        print("download failed")
-                        return
-                    }
-
-                    print("\(downloadURL)")
-                }
+//                audioRef.downloadURL { url, _ in
+//                    guard let downloadURL = url else {
+//                        print("download failed")
+//                        return
+//                    }
+//
+//                    print("\(downloadURL)")
+//                }
             }
         } catch {
             print("no file")

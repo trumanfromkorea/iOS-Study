@@ -16,12 +16,13 @@
 		0D8BB49928697D0900C368BC /* RecordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB49828697D0900C368BC /* RecordAppTests.swift */; };
 		0D8BB4A328697D0900C368BC /* RecordAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB4A228697D0900C368BC /* RecordAppUITests.swift */; };
 		0D8BB4A528697D0900C368BC /* RecordAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB4A428697D0900C368BC /* RecordAppUITestsLaunchTests.swift */; };
-		0D8BB4B22869827200C368BC /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB4B12869827200C368BC /* RecordCell.swift */; };
+		0D8BB4B22869827200C368BC /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB4B12869827200C368BC /* AudioCell.swift */; };
 		0D8BB4B4286983CD00C368BC /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB4B3286983CD00C368BC /* RecordViewController.swift */; };
 		0D8BB4B6286983D700C368BC /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB4B5286983D700C368BC /* PlayViewController.swift */; };
 		0D8BB4B8286994C000C368BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D8BB4B7286994C000C368BC /* GoogleService-Info.plist */; };
 		0D8BB4BB2869954F00C368BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0D8BB4BA2869954F00C368BC /* FirebaseStorage */; };
 		0D8BB4BD2869969300C368BC /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB4BC2869969300C368BC /* FirebaseModel.swift */; };
+		0D8BB4BF2869A77900C368BC /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BB4BE2869A77900C368BC /* AudioModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +56,12 @@
 		0D8BB49E28697D0900C368BC /* RecordAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8BB4A228697D0900C368BC /* RecordAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAppUITests.swift; sourceTree = "<group>"; };
 		0D8BB4A428697D0900C368BC /* RecordAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0D8BB4B12869827200C368BC /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		0D8BB4B12869827200C368BC /* AudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCell.swift; sourceTree = "<group>"; };
 		0D8BB4B3286983CD00C368BC /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		0D8BB4B5286983D700C368BC /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		0D8BB4B7286994C000C368BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D8BB4BC2869969300C368BC /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
+		0D8BB4BE2869A77900C368BC /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +118,10 @@
 				0D8BB4BC2869969300C368BC /* FirebaseModel.swift */,
 				0D8BB48328697D0800C368BC /* SceneDelegate.swift */,
 				0D8BB48528697D0800C368BC /* ViewController.swift */,
+				0D8BB4BE2869A77900C368BC /* AudioModel.swift */,
 				0D8BB4B3286983CD00C368BC /* RecordViewController.swift */,
 				0D8BB4B5286983D700C368BC /* PlayViewController.swift */,
-				0D8BB4B12869827200C368BC /* RecordCell.swift */,
+				0D8BB4B12869827200C368BC /* AudioCell.swift */,
 				0D8BB48728697D0800C368BC /* Main.storyboard */,
 				0D8BB48A28697D0900C368BC /* Assets.xcassets */,
 				0D8BB48C28697D0900C368BC /* LaunchScreen.storyboard */,
@@ -285,9 +288,10 @@
 				0D8BB48628697D0800C368BC /* ViewController.swift in Sources */,
 				0D8BB48228697D0800C368BC /* AppDelegate.swift in Sources */,
 				0D8BB4B4286983CD00C368BC /* RecordViewController.swift in Sources */,
-				0D8BB4B22869827200C368BC /* RecordCell.swift in Sources */,
+				0D8BB4B22869827200C368BC /* AudioCell.swift in Sources */,
 				0D8BB4B6286983D700C368BC /* PlayViewController.swift in Sources */,
 				0D8BB48428697D0800C368BC /* SceneDelegate.swift in Sources */,
+				0D8BB4BF2869A77900C368BC /* AudioModel.swift in Sources */,
 				0D8BB4BD2869969300C368BC /* FirebaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,10 +7,11 @@
 
 import UIKit
 
-class RecordCell: UITableViewCell {
+class AudioCell: UITableViewCell {
     
-    static let identifier = "RecordCell"
+    static let identifier = "AudioCell"
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,12 +20,11 @@ class RecordCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
-    func configureCell(_ title: String) {
-        
+    func configureCell(_ item: AudioCellItem) {
+        titleLabel.text = item.title
+        durationLabel.text = item.duration
     }
 
 }
