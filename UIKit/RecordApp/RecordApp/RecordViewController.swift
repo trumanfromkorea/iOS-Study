@@ -6,6 +6,7 @@
 //
 
 import AVFoundation
+import FirebaseStorage
 import UIKit
 
 class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
@@ -13,11 +14,11 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     static let storyboard = "Main"
 
     @IBOutlet var recordButton: UIButton!
-    @IBOutlet weak var playButton: UIButton!
-    
+    @IBOutlet var playButton: UIButton!
+
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
-    
+
     var audioFile: URL!
     var audioPlayer: AVAudioPlayer!
 
@@ -41,12 +42,16 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
             finishRecording(success: true)
         }
     }
-    
+
     @IBAction func onTappedPlayButton(_ sender: Any) {
         initPlayer()
         audioPlayer.play()
     }
-    
+
+    @IBAction func onTappedUploadButton(_ sender: Any) {
+        uploadFile()
+    }
+
     private func initRecordSession() {
         recordingSession = AVAudioSession.sharedInstance()
 
@@ -67,17 +72,16 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
             print("record session error \(error)")
         }
     }
-    
+
     private func initPlayer() {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: audioFile)
         } catch let error {
             print("init player error \(error)")
         }
-        
+
         audioPlayer.delegate = self
         audioPlayer.prepareToPlay()
-        
     }
 
     private func startRecording() {
@@ -97,7 +101,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
             audioRecorder.record()
 
             recordButton.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-            
+
         } catch {
             finishRecording(success: false)
         }
@@ -117,13 +121,43 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
         } else {
             print("failed")
         }
-        
+
         recordButton.setImage(UIImage(systemName: "record.circle.fill"), for: .normal)
     }
 
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag {
             finishRecording(success: false)
+        }
+    }
+
+    private func uploadFile() {
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+
+        let audioRef = storageRef.child("audio.m4a")
+
+        do {
+            let data = try Data(contentsOf: audioFile)
+
+            let uploadTask = audioRef.putData(data, metadata: nil) { metadata, _ in
+                guard let metadata = metadata else {
+                    print("metadata failed")
+                    return
+                }
+
+                let size = metadata.size
+                audioRef.downloadURL { url, _ in
+                    guard let downloadURL = url else {
+                        print("download failed")
+                        return
+                    }
+
+                    print("\(downloadURL)")
+                }
+            }
+        } catch {
+            print("no file")
         }
     }
 }

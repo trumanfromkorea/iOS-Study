@@ -22,20 +22,20 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordCell" id="tJl-zt-F8z" customClass="RecordCell" customModule="RecordApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="41"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="41.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tJl-zt-F8z" id="7zV-sv-Iae">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.06.27 15:09:54" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydI-XH-nd3">
-                                                    <rect key="frame" x="20" y="10" width="160" height="21"/>
+                                                    <rect key="frame" x="20" y="10" width="160" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV8-z3-xXZ">
-                                                    <rect key="frame" x="351" y="10" width="43" height="21"/>
+                                                    <rect key="frame" x="351" y="10" width="43" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -131,15 +131,26 @@
                                     <action selector="onTappedPlayButton:" destination="mQ8-P1-EMb" eventType="touchUpInside" id="dNx-1I-Y3m"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQs-Ix-KDw">
+                                <rect key="frame" x="182" y="594" width="50" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.up.doc" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="onTappedUploadButton:" destination="mQ8-P1-EMb" eventType="touchUpInside" id="ybv-pG-PCm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jO3-ZZ-jUP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yQs-Ix-KDw" firstAttribute="leading" secondItem="Kfp-0A-67k" secondAttribute="leading" id="2qV-Ln-EeO"/>
                             <constraint firstItem="Kfp-0A-67k" firstAttribute="top" secondItem="xh1-oD-z4n" secondAttribute="bottom" constant="27" id="Dg5-lX-D2k"/>
+                            <constraint firstItem="yQs-Ix-KDw" firstAttribute="top" secondItem="Kfp-0A-67k" secondAttribute="bottom" constant="58" id="NER-vP-Ufp"/>
                             <constraint firstItem="Kfp-0A-67k" firstAttribute="leading" secondItem="xh1-oD-z4n" secondAttribute="leading" id="S1n-HG-fg3"/>
                             <constraint firstItem="xh1-oD-z4n" firstAttribute="centerX" secondItem="jO3-ZZ-jUP" secondAttribute="centerX" id="XNo-fC-62F"/>
                             <constraint firstItem="Kfp-0A-67k" firstAttribute="trailing" secondItem="xh1-oD-z4n" secondAttribute="trailing" id="iFf-OE-Pqk"/>
                             <constraint firstItem="xh1-oD-z4n" firstAttribute="centerY" secondItem="jO3-ZZ-jUP" secondAttribute="centerY" id="nP9-YK-g8a"/>
+                            <constraint firstItem="yQs-Ix-KDw" firstAttribute="trailing" secondItem="Kfp-0A-67k" secondAttribute="trailing" id="xru-7A-Nmd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -168,6 +179,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.doc" catalog="system" width="115" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="record.circle.fill" catalog="system" width="128" height="121"/>
