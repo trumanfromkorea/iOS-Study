@@ -1,0 +1,28 @@
+{
+    "foods": [
+        {
+            "name": "pizza",
+            "price": 20000
+        },
+        {
+            "name": "chicken",
+            "price": 15000
+        },
+        {
+            "name": "soup",
+            "price": 5000
+        },
+        {
+            "name": "coffee",
+            "price": 15000
+        },
+        {
+            "name": "bread",
+            "price": 2000
+        },
+        {
+            "name": "burger",
+            "price": 10000
+        },
+    ]
+}
