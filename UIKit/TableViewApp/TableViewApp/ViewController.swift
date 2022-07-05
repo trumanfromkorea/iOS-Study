@@ -22,10 +22,10 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return dataList.count
-    }
-    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return dataList.count
+//    }
+//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let foodType = foodTypes[section]
 
@@ -47,10 +47,10 @@ extension ViewController: UITableViewDataSource {
 
         return cell
     }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let foodType = foodTypes[section]
-
-        return foodType.rawValue
-    }
+//
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let foodType = foodTypes[section]
+//
+//        return foodType.rawValue
+//    }
 }
