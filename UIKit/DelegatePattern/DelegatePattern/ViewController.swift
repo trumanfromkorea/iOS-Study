@@ -7,26 +7,34 @@
 
 import UIKit
 
-class ViewController: UIViewController, CodaDelegate {
-    @IBOutlet var countLabel: UILabel!
+class ViewController: UIViewController {
+    @IBOutlet var tableView: UITableView!
 
-    var count = 0
+    let sampleData = [Data]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // tableView 의 dataSource 를 담당하는건 ViewController 자신
+        tableView.dataSource = self
     }
+}
 
-    func increment() {
-        count += 1
-        countLabel.text = "\(count)"
+// UITableViewDataSource 프로토콜을 채택, 필수 메소드 구현
+extension ViewController: UITableViewDataSource {
+    // TableView 에 나타날 행 (데이터) 의 개수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sampleData.count
     }
-
-    @IBAction func onTappedModalButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: ModalViewController.storyboard, bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: ModalViewController.identifier) as! ModalViewController
-
-        vc.delegate = self
-
-        present(vc, animated: true)
+    
+    // TableView 에 나타낼 Cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MyCell.identifier, for: indexPath) as? MyCell else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(sampleData[indexPath.item])
+        
+        return cell
     }
 }
