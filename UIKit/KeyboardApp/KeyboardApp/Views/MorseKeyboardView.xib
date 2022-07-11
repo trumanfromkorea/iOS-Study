@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zfF-kS-MOw" userLabel="View" customClass="MorseKeyboardView" customModule="CustomKeyboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="387"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skF-MR-KmJ" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="366" y="303" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="80n-7n-1Y5"/>
+                    </constraints>
+                    <state key="normal" image="Backspace">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="deletePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="DPS-Ht-JlV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZ3-pS-XHd" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="55" y="303" width="305" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="bOE-sf-xqx"/>
+                    </constraints>
+                    <state key="normal" title="space">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="OGw-hX-1hm"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r45-2U-9Qr">
+                    <rect key="frame" x="0.0" y="44" width="415" height="45"/>
+                    <color key="backgroundColor" red="0.68235294120000001" green="0.70196078429999997" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="1Xp-ud-YOF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgv-5T-oBD" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="4" y="303" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="5hb-L1-uXd"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="C25-V8-LlO"/>
+                        <constraint firstAttribute="width" constant="45" id="cO9-BR-UjC"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="zU6-gt-d2U"/>
+                    </constraints>
+                    <state key="normal" image="NextKeyboard"/>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KOo-py-g4C">
+                    <rect key="frame" x="0.0" y="89" width="415" height="111"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKT-W4-gef" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㅂ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="keyPressed:" destination="zfF-kS-MOw" eventType="touchUpInside" id="d9g-P6-qrd"/>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="7xs-bd-VKf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S9-Yi-7ml" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="43" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㅈ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="Zd3-Yi-85E"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNl-J9-k9Q" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="85.5" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㄷ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="4kp-1x-Iaw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWe-wb-IQK" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="128.5" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㄱ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="NHp-Ze-5Jg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl0-fI-Kxj" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="171" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㅅ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="KwB-f7-Vvt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ato-RI-rAQ" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="214" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㅛ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="Z9U-iF-4gt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASN-08-8iy" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="256.5" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㅕ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="dLM-fn-GSo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unl-tk-AdD" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="299.5" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㅑ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="KV3-Ny-1bd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvq-90-8xJ" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="342" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㅐ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="b54-Zg-eu4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcI-nO-lO3" customClass="KeyboardButton" customModule="CustomKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="385" y="0.0" width="30" height="111"/>
+                            <state key="normal" title="ㅔ">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="spacePressed" destination="zfF-kS-MOw" eventType="touchUpInside" id="N9x-sB-ZNW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="HmY-z1-GSS"/>
+            <constraints>
+                <constraint firstItem="fZ3-pS-XHd" firstAttribute="leading" secondItem="HmY-z1-GSS" secondAttribute="leading" priority="750" constant="4" id="3B6-z4-fyf"/>
+                <constraint firstItem="skF-MR-KmJ" firstAttribute="leading" secondItem="fZ3-pS-XHd" secondAttribute="trailing" constant="6" id="5Tl-Ja-Lf9"/>
+                <constraint firstItem="r45-2U-9Qr" firstAttribute="top" secondItem="HmY-z1-GSS" secondAttribute="top" id="5lZ-P2-zQT"/>
+                <constraint firstItem="HmY-z1-GSS" firstAttribute="trailing" secondItem="skF-MR-KmJ" secondAttribute="trailing" constant="4" id="A74-JE-m3w"/>
+                <constraint firstItem="fZ3-pS-XHd" firstAttribute="bottom" secondItem="skF-MR-KmJ" secondAttribute="bottom" id="FVz-Fm-dMy"/>
+                <constraint firstItem="HmY-z1-GSS" firstAttribute="bottom" secondItem="fZ3-pS-XHd" secondAttribute="bottom" constant="5" id="FfP-7w-vck"/>
+                <constraint firstItem="HmY-z1-GSS" firstAttribute="bottom" secondItem="fgv-5T-oBD" secondAttribute="bottom" constant="5" id="HsO-04-b6B"/>
+                <constraint firstItem="r45-2U-9Qr" firstAttribute="leading" secondItem="HmY-z1-GSS" secondAttribute="leading" id="ICI-uu-TZq"/>
+                <constraint firstItem="fZ3-pS-XHd" firstAttribute="leading" secondItem="fgv-5T-oBD" secondAttribute="trailing" constant="6" id="LI9-Ew-XYi"/>
+                <constraint firstItem="KOo-py-g4C" firstAttribute="leading" secondItem="HmY-z1-GSS" secondAttribute="leading" id="TQh-xw-4Wp"/>
+                <constraint firstItem="fgv-5T-oBD" firstAttribute="leading" secondItem="HmY-z1-GSS" secondAttribute="leading" constant="4" id="Uls-xF-Zui"/>
+                <constraint firstItem="skF-MR-KmJ" firstAttribute="height" secondItem="fZ3-pS-XHd" secondAttribute="height" id="XzM-5U-7rg"/>
+                <constraint firstItem="HmY-z1-GSS" firstAttribute="trailing" secondItem="KOo-py-g4C" secondAttribute="trailing" id="YOZ-nV-7PV"/>
+                <constraint firstItem="KOo-py-g4C" firstAttribute="top" secondItem="r45-2U-9Qr" secondAttribute="bottom" id="d1O-mj-8U0"/>
+                <constraint firstItem="r45-2U-9Qr" firstAttribute="trailing" secondItem="HmY-z1-GSS" secondAttribute="trailing" id="dQ7-SZ-Ca8"/>
+                <constraint firstItem="fZ3-pS-XHd" firstAttribute="top" secondItem="KOo-py-g4C" secondAttribute="bottom" constant="103" id="eGP-pK-ebq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="deleteButton" destination="skF-MR-KmJ" id="vrX-vx-Inq"/>
+                <outlet property="nextKeyboardButton" destination="fgv-5T-oBD" id="N4w-ag-SMx"/>
+                <outlet property="previewLabel" destination="r45-2U-9Qr" id="sW7-Zf-lUb"/>
+                <outlet property="spaceButtonToNextKeyboardConstraint" destination="LI9-Ew-XYi" id="2Ww-5V-kCt"/>
+                <outlet property="spaceButtonToParentConstraint" destination="3B6-z4-fyf" id="hiq-eb-CsE"/>
+            </connections>
+            <point key="canvasLocation" x="67.391304347826093" y="315.73660714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Backspace" width="24" height="18"/>
+        <image name="NextKeyboard" width="19" height="19"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
