@@ -18,17 +18,11 @@
 		0D5F75C5287C096E00E5E342 /* KeyboardAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F75C4287C096E00E5E342 /* KeyboardAppUITestsLaunchTests.swift */; };
 		0D5F75D8287C098300E5E342 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F75D7287C098300E5E342 /* KeyboardViewController.swift */; };
 		0D5F75DC287C098300E5E342 /* CustomKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0D5F75D5287C098300E5E342 /* CustomKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0D5F75F3287C114700E5E342 /* MorseColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F75F2287C114700E5E342 /* MorseColors.swift */; };
-		0D5F75F8287C117200E5E342 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F75F7287C117200E5E342 /* KeyboardButton.swift */; };
-		0D5F75FA287C11A200E5E342 /* MorseKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F75F9287C11A200E5E342 /* MorseKeyboardView.swift */; };
-		0D5F75FC287C11BD00E5E342 /* MorseKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F75FB287C11BD00E5E342 /* MorseKeyboardView.xib */; };
-		0D5F75FD287C12AA00E5E342 /* MorseKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F75FB287C11BD00E5E342 /* MorseKeyboardView.xib */; };
-		0D5F75FE287C12AA00E5E342 /* MorseColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F75F2287C114700E5E342 /* MorseColors.swift */; };
-		0D5F75FF287C12AA00E5E342 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F75F7287C117200E5E342 /* KeyboardButton.swift */; };
 		0D5F7601287C12AA00E5E342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F75AA287C096E00E5E342 /* Assets.xcassets */; };
-		0D5F7602287C12AA00E5E342 /* MorseKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F75F9287C11A200E5E342 /* MorseKeyboardView.swift */; };
-		0D5F7604287C15D200E5E342 /* KoreanKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F7603287C15D200E5E342 /* KoreanKey.swift */; };
-		0D5F7605287C19D600E5E342 /* KoreanKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F7603287C15D200E5E342 /* KoreanKey.swift */; };
+		0D5F7608287C22F800E5E342 /* TextString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F7607287C22F800E5E342 /* TextString.swift */; };
+		0D5F760A287C231400E5E342 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F7609287C231400E5E342 /* KeyboardButton.swift */; };
+		0D5F760B287C232100E5E342 /* TextString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F7607287C22F800E5E342 /* TextString.swift */; };
+		0D5F760C287C232400E5E342 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F7609287C231400E5E342 /* KeyboardButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,11 +80,8 @@
 		0D5F75D5287C098300E5E342 /* CustomKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CustomKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5F75D7287C098300E5E342 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0D5F75D9287C098300E5E342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D5F75F2287C114700E5E342 /* MorseColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseColors.swift; sourceTree = "<group>"; };
-		0D5F75F7287C117200E5E342 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
-		0D5F75F9287C11A200E5E342 /* MorseKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseKeyboardView.swift; sourceTree = "<group>"; };
-		0D5F75FB287C11BD00E5E342 /* MorseKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorseKeyboardView.xib; sourceTree = "<group>"; };
-		0D5F7603287C15D200E5E342 /* KoreanKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanKey.swift; sourceTree = "<group>"; };
+		0D5F7607287C22F800E5E342 /* TextString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextString.swift; sourceTree = "<group>"; };
+		0D5F7609287C231400E5E342 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +141,7 @@
 		0D5F75A0287C096B00E5E342 /* KeyboardApp */ = {
 			isa = PBXGroup;
 			children = (
-				0D5F75F6287C116400E5E342 /* Views */,
-				0D5F75F1287C113E00E5E342 /* Data */,
+				0D5F7606287C22EE00E5E342 /* Data */,
 				0D5F75A1287C096B00E5E342 /* AppDelegate.swift */,
 				0D5F75A3287C096B00E5E342 /* SceneDelegate.swift */,
 				0D5F75A5287C096B00E5E342 /* ViewController.swift */,
@@ -189,23 +179,13 @@
 			path = CustomKeyboard;
 			sourceTree = "<group>";
 		};
-		0D5F75F1287C113E00E5E342 /* Data */ = {
+		0D5F7606287C22EE00E5E342 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0D5F75F2287C114700E5E342 /* MorseColors.swift */,
-				0D5F7603287C15D200E5E342 /* KoreanKey.swift */,
+				0D5F7607287C22F800E5E342 /* TextString.swift */,
+				0D5F7609287C231400E5E342 /* KeyboardButton.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		0D5F75F6287C116400E5E342 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0D5F75F7287C117200E5E342 /* KeyboardButton.swift */,
-				0D5F75F9287C11A200E5E342 /* MorseKeyboardView.swift */,
-				0D5F75FB287C11BD00E5E342 /* MorseKeyboardView.xib */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +315,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5F75FC287C11BD00E5E342 /* MorseKeyboardView.xib in Resources */,
 				0D5F75AE287C096E00E5E342 /* LaunchScreen.storyboard in Resources */,
 				0D5F75AB287C096E00E5E342 /* Assets.xcassets in Resources */,
 				0D5F75A9287C096B00E5E342 /* Main.storyboard in Resources */,
@@ -361,7 +340,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D5F7601287C12AA00E5E342 /* Assets.xcassets in Resources */,
-				0D5F75FD287C12AA00E5E342 /* MorseKeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,13 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5F75F8287C117200E5E342 /* KeyboardButton.swift in Sources */,
-				0D5F75F3287C114700E5E342 /* MorseColors.swift in Sources */,
-				0D5F7604287C15D200E5E342 /* KoreanKey.swift in Sources */,
+				0D5F760A287C231400E5E342 /* KeyboardButton.swift in Sources */,
 				0D5F75A6287C096B00E5E342 /* ViewController.swift in Sources */,
-				0D5F75FA287C11A200E5E342 /* MorseKeyboardView.swift in Sources */,
 				0D5F75A2287C096B00E5E342 /* AppDelegate.swift in Sources */,
 				0D5F75A4287C096B00E5E342 /* SceneDelegate.swift in Sources */,
+				0D5F7608287C22F800E5E342 /* TextString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,11 +379,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5F7602287C12AA00E5E342 /* MorseKeyboardView.swift in Sources */,
-				0D5F75FF287C12AA00E5E342 /* KeyboardButton.swift in Sources */,
-				0D5F75FE287C12AA00E5E342 /* MorseColors.swift in Sources */,
+				0D5F760C287C232400E5E342 /* KeyboardButton.swift in Sources */,
 				0D5F75D8287C098300E5E342 /* KeyboardViewController.swift in Sources */,
-				0D5F7605287C19D600E5E342 /* KoreanKey.swift in Sources */,
+				0D5F760B287C232100E5E342 /* TextString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,7 +694,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -745,7 +719,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
