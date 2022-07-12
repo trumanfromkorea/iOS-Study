@@ -1,10 +1,11 @@
 //
 //  KeyboardButton.swift
-//  KeyboardApp
+//  CustomKeyboard
 //
-//  Created by 장재훈 on 2022/07/11.
+//  Created by 장재훈 on 2022/07/12.
 //
 
+import Foundation
 import UIKit
 
 class DKey: UIButton {
@@ -22,9 +23,9 @@ class KeyboardButton: UIView {
     // var defaultBackgroundColor: UIColor = .white
     // var highlightBackgroundColor: UIColor = .lightGray
 
-    var buttonTextColor = UIColor(named: "ButtonText")
-    var buttonBackgroundColor = UIColor(named: "ButtonBackground")
-    var buttonHighlightColor = UIColor(named: "ButtonHighlight")
+    var buttonTextColor = UIColor.label
+    var buttonBackgroundColor = UIColor.systemBackground
+    var buttonHighlightColor = UIColor.secondarySystemBackground
 
     lazy var button: DKey = {
         let btn = DKey(type: .custom)
@@ -52,19 +53,13 @@ class KeyboardButton: UIView {
         setupView()
     }
 
-    // custom views should override this to return true if
-    // they cannot layout correctly using autoresizing.
-    // from apple docs https://developer.apple.com/documentation/uikit/uiview/1622549-requiresconstraintbasedlayout
     override class var requiresConstraintBasedLayout: Bool {
         return true
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        buttonTextColor = UIColor(named: "ButtonText")
-        buttonBackgroundColor = UIColor(named: "ButtonBackground")
-        buttonHighlightColor = UIColor(named: "ButtonHighlight")
-        // self.backgroundColor = self.button.isHighlighted ? highlightBackgroundColor : defaultBackgroundColor
+
         backgroundColor = buttonBackgroundColor
         button.setTitleColor(buttonTextColor, for: .normal)
         button.tintColor = buttonTextColor
@@ -103,11 +98,9 @@ class KeyboardButton: UIView {
         button.setOptionText(text)
     }
 
-    func setTitle(text: String?, option: String?, for state: UIControl.State) {
+    func setTitle(text: String?, for state: UIControl.State) {
         DispatchQueue.main.async {
             self.button.setTitle(text, for: state)
-            self.optionLabel.text = option
-            self.button.setOptionText(option)
         }
     }
 

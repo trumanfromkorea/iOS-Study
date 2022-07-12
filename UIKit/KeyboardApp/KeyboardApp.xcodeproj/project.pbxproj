@@ -78,7 +78,7 @@
 		0D5F75C2287C096E00E5E342 /* KeyboardAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAppUITests.swift; sourceTree = "<group>"; };
 		0D5F75C4287C096E00E5E342 /* KeyboardAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0D5F75D5287C098300E5E342 /* CustomKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CustomKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D5F75D7287C098300E5E342 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		0D5F75D7287C098300E5E342 /* KeyboardViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0D5F75D9287C098300E5E342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5F7607287C22F800E5E342 /* TextString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextString.swift; sourceTree = "<group>"; };
 		0D5F7609287C231400E5E342 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };

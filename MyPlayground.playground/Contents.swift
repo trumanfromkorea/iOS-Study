@@ -1,50 +1,16 @@
 import Foundation
 
-let n = Int(readLine()!)!
-let array = readLine()!.split(separator: " ").map { Int(String($0))! }
+let url = "https://api.plkey.app/"
 
-// + - * /
-var operators = readLine()!.split(separator: " ").map { Int(String($0))! }
-
-var maxVal = Int.min
-var minVal = Int.max
-
-calculate(array.first!, 1)
-
-print(maxVal)
-print(minVal)
-
-// 메소드 선언
-func calculate(_ value: Int, _ index: Int) {
-    if index == n {
-        maxVal = max(value, maxVal)
-        minVal = min(value, minVal)
+URLSession.shared.dataTask(with: URL(string: url + "theme/review?themeId6&start=0&count=20")!) { data, response, error in
+    guard let error = error else {
         return
     }
-    
-    for i in 0 ..< 4 {
-        if operators[i] == 0 {
-            continue
-        }
 
-        operators[i] -= 1
-
-        var result = value
-
-        switch i {
-        case 0:
-            result += array[index]
-        case 1:
-            result -= array[index]
-        case 2:
-            result *= array[index]
-        case 3:
-            result /= array[index]
-        default:
-            break
-        }
-
-        calculate(result, index + 1)
-        operators[i] += 1
+    guard let data = data else {
+        return
     }
+
+    print(data)
 }
+.resume()
