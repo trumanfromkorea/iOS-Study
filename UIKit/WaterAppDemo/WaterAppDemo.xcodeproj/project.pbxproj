@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0E8701287F0F1A002FD980 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8700287F0F1A002FD980 /* WaterData.swift */; };
+		0D0E8705287F0F9D002FD980 /* MainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8704287F0F9D002FD980 /* MainCollectionView.swift */; };
+		0D0E8707287F0FBC002FD980 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */; };
 		0D2F1A942879CA7C0011D179 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 0D2F1A932879CA7C0011D179 /* Inject */; };
 		0DAB77442879F9B400F3F067 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0DAB77432879F9B400F3F067 /* SnapKit */; };
 		0DAB77462879F9D900F3F067 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB77452879F9D900F3F067 /* DetailsViewController.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0E8700287F0F1A002FD980 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
+		0D0E8704287F0F9D002FD980 /* MainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionView.swift; sourceTree = "<group>"; };
+		0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		0DAB77452879F9D900F3F067 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		0DAB77472879F9E500F3F067 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0DAB774A2879FA0300F3F067 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -88,6 +94,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0E86FF287F0F10002FD980 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D0E8700287F0F1A002FD980 /* WaterData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D0E8702287F0F3C002FD980 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0DF30ABE2879AFE9001F0DD5 /* CustomNavigationController.swift */,
+				0DAB77452879F9D900F3F067 /* DetailsViewController.swift */,
+				0DAB77472879F9E500F3F067 /* SearchViewController.swift */,
+				0D0E8703287F0F45002FD980 /* Main */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		0D0E8703287F0F45002FD980 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0DF30A922879AF74001F0DD5 /* MainViewController.swift */,
+				0D0E8704287F0F9D002FD980 /* MainCollectionView.swift */,
+				0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		0DAB77492879F9F600F3F067 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,13 +155,11 @@
 		0DF30A8D2879AF74001F0DD5 /* WaterAppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0D0E8702287F0F3C002FD980 /* Scene */,
+				0D0E86FF287F0F10002FD980 /* Model */,
 				0DAB77492879F9F600F3F067 /* Extensions */,
 				0DF30A8E2879AF74001F0DD5 /* AppDelegate.swift */,
 				0DF30A902879AF74001F0DD5 /* SceneDelegate.swift */,
-				0DF30ABE2879AFE9001F0DD5 /* CustomNavigationController.swift */,
-				0DAB77452879F9D900F3F067 /* DetailsViewController.swift */,
-				0DAB77472879F9E500F3F067 /* SearchViewController.swift */,
-				0DF30A922879AF74001F0DD5 /* MainViewController.swift */,
 				0DF30A972879AF74001F0DD5 /* Assets.xcassets */,
 				0DF30A992879AF74001F0DD5 /* LaunchScreen.storyboard */,
 				0DF30A9C2879AF74001F0DD5 /* Info.plist */,
@@ -292,9 +325,12 @@
 				0DAB77482879F9E500F3F067 /* SearchViewController.swift in Sources */,
 				0DAB774D2879FA7C00F3F067 /* UIColor+.swift in Sources */,
 				0DAB774B2879FA0300F3F067 /* UIButton+.swift in Sources */,
+				0D0E8701287F0F1A002FD980 /* WaterData.swift in Sources */,
 				0DF30ABF2879AFE9001F0DD5 /* CustomNavigationController.swift in Sources */,
 				0DF30A932879AF74001F0DD5 /* MainViewController.swift in Sources */,
 				0DF30A8F2879AF74001F0DD5 /* AppDelegate.swift in Sources */,
+				0D0E8707287F0FBC002FD980 /* MainCollectionViewCell.swift in Sources */,
+				0D0E8705287F0F9D002FD980 /* MainCollectionView.swift in Sources */,
 				0DF30A912879AF74001F0DD5 /* SceneDelegate.swift in Sources */,
 				0DAB77462879F9D900F3F067 /* DetailsViewController.swift in Sources */,
 			);
