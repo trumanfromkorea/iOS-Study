@@ -9,7 +9,7 @@ import SnapKit
 import UIKit
 
 class MainViewController: UIViewController {
-    private var mainCollectionView: MainCollectionView!
+    private var mainCollectionView: UICollectionView!
 
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     typealias Item = Int
@@ -23,10 +23,11 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureViewSettings()
         configureLayout()
-        configureCollectionView()    }
+        configureCollectionView()
+    }
 }
 
 extension MainViewController {
@@ -39,7 +40,7 @@ extension MainViewController {
     }
 
     private func configureLayout() {
-        mainCollectionView = MainCollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+        mainCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
         mainCollectionView.translatesAutoresizingMaskIntoConstraints = false
         mainCollectionView.backgroundColor = .systemBackground
 
@@ -55,8 +56,17 @@ extension MainViewController {
 
 // MARK: - CollectionView {
 
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = DetailsViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
 extension MainViewController {
     private func configureCollectionView() {
+        mainCollectionView.delegate = self
+        
         mainCollectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
         mainCollectionView.showsVerticalScrollIndicator = false
 

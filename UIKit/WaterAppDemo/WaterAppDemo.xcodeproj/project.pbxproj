@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D0E8701287F0F1A002FD980 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8700287F0F1A002FD980 /* WaterData.swift */; };
-		0D0E8705287F0F9D002FD980 /* MainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8704287F0F9D002FD980 /* MainCollectionView.swift */; };
 		0D0E8707287F0FBC002FD980 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */; };
 		0DAB77442879F9B400F3F067 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0DAB77432879F9B400F3F067 /* SnapKit */; };
 		0DAB77462879F9D900F3F067 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB77452879F9D900F3F067 /* DetailsViewController.swift */; };
@@ -24,6 +23,8 @@
 		0DF30AB02879AF74001F0DD5 /* WaterAppDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF30AAF2879AF74001F0DD5 /* WaterAppDemoUITests.swift */; };
 		0DF30AB22879AF74001F0DD5 /* WaterAppDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF30AB12879AF74001F0DD5 /* WaterAppDemoUITestsLaunchTests.swift */; };
 		0DF30ABF2879AFE9001F0DD5 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF30ABE2879AFE9001F0DD5 /* CustomNavigationController.swift */; };
+		0DF44F29287FF8D4004AB6A3 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 0DF44F28287FF8D4004AB6A3 /* Charts */; };
+		0DF44F2C287FFB9D004AB6A3 /* DataSetValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF44F2B287FFB9D004AB6A3 /* DataSetValueFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		0D0E8700287F0F1A002FD980 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
-		0D0E8704287F0F9D002FD980 /* MainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionView.swift; sourceTree = "<group>"; };
 		0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		0DAB77452879F9D900F3F067 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		0DAB77472879F9E500F3F067 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +64,7 @@
 		0DF30AAF2879AF74001F0DD5 /* WaterAppDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAppDemoUITests.swift; sourceTree = "<group>"; };
 		0DF30AB12879AF74001F0DD5 /* WaterAppDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAppDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0DF30ABE2879AFE9001F0DD5 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		0DF44F2B287FFB9D004AB6A3 /* DataSetValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSetValueFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DAB77442879F9B400F3F067 /* SnapKit in Frameworks */,
+				0DF44F29287FF8D4004AB6A3 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +105,8 @@
 		0D0E8702287F0F3C002FD980 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				0DF44F2A287FFB87004AB6A3 /* Details */,
 				0DF30ABE2879AFE9001F0DD5 /* CustomNavigationController.swift */,
-				0DAB77452879F9D900F3F067 /* DetailsViewController.swift */,
 				0DAB77472879F9E500F3F067 /* SearchViewController.swift */,
 				0D0E8703287F0F45002FD980 /* Main */,
 			);
@@ -115,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				0DF30A922879AF74001F0DD5 /* MainViewController.swift */,
-				0D0E8704287F0F9D002FD980 /* MainCollectionView.swift */,
 				0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */,
 			);
 			path = Main;
@@ -182,6 +183,15 @@
 			path = WaterAppDemoUITests;
 			sourceTree = "<group>";
 		};
+		0DF44F2A287FFB87004AB6A3 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				0DAB77452879F9D900F3F067 /* DetailsViewController.swift */,
+				0DF44F2B287FFB9D004AB6A3 /* DataSetValueFormatter.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +210,7 @@
 			name = WaterAppDemo;
 			packageProductDependencies = (
 				0DAB77432879F9B400F3F067 /* SnapKit */,
+				0DF44F28287FF8D4004AB6A3 /* Charts */,
 			);
 			productName = WaterAppDemo;
 			productReference = 0DF30A8B2879AF74001F0DD5 /* WaterAppDemo.app */;
@@ -275,6 +286,7 @@
 			mainGroup = 0DF30A822879AF74001F0DD5;
 			packageReferences = (
 				0DAB77422879F9B400F3F067 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0DF44F27287FF8D4004AB6A3 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 0DF30A8C2879AF74001F0DD5 /* Products */;
 			projectDirPath = "";
@@ -326,8 +338,8 @@
 				0DF30A932879AF74001F0DD5 /* MainViewController.swift in Sources */,
 				0DF30A8F2879AF74001F0DD5 /* AppDelegate.swift in Sources */,
 				0D0E8707287F0FBC002FD980 /* MainCollectionViewCell.swift in Sources */,
-				0D0E8705287F0F9D002FD980 /* MainCollectionView.swift in Sources */,
 				0DF30A912879AF74001F0DD5 /* SceneDelegate.swift in Sources */,
+				0DF44F2C287FFB9D004AB6A3 /* DataSetValueFormatter.swift in Sources */,
 				0DAB77462879F9D900F3F067 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +688,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		0DF44F27287FF8D4004AB6A3 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -683,6 +703,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0DAB77422879F9B400F3F067 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		0DF44F28287FF8D4004AB6A3 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DF44F27287FF8D4004AB6A3 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
