@@ -8,16 +8,6 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    init() {
-        super.init(nibName: nil, bundle: nil)
-
-        configureViewSettings()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        print("required init for: coder")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
