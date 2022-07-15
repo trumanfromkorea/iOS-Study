@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     private var mainCollectionView: UICollectionView!
+    private var viewModel = MainViewModel(NetworkManager.shared)
 
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     typealias Item = Int
@@ -23,6 +24,8 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        viewModel.getDataList()
 
         configureViewSettings()
         configureLayout()
@@ -66,7 +69,7 @@ extension MainViewController: UICollectionViewDelegate {
 extension MainViewController {
     private func configureCollectionView() {
         mainCollectionView.delegate = self
-        
+
         mainCollectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
         mainCollectionView.showsVerticalScrollIndicator = false
 
