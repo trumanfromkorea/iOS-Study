@@ -1,16 +1,40 @@
 import Foundation
 
-let url = "https://api.plkey.app/"
-
-URLSession.shared.dataTask(with: URL(string: url + "theme/review?themeId6&start=0&count=20")!) { data, response, error in
-    guard let error = error else {
-        return
-    }
-
-    guard let data = data else {
-        return
-    }
-
-    print(data)
+enum Method {
+    case get
+    case post
 }
-.resume()
+
+protocol API {
+    var method: Method { get }
+}
+
+class NetworkManager {
+    static let shared = NetworkManager()
+
+    private init() {}
+
+    func request(api: API) {
+        switch api.method {
+        case .get:
+            getRequest()
+        case .post:
+            postRequest()
+        }
+    }
+
+    private func getRequest() {
+        print("GET REQUEST")
+    }
+
+    private func postRequest() {
+        print("POST REQUEST")
+    }
+}
+
+struct getAPI: API {
+    var method: Method = Method.get
+}
+
+NetworkManager.shared.request(api: getAPI())
+

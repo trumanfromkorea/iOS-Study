@@ -105,9 +105,9 @@
 		0D0E8702287F0F3C002FD980 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				0DF44F2A287FFB87004AB6A3 /* Details */,
 				0DF30ABE2879AFE9001F0DD5 /* CustomNavigationController.swift */,
-				0DAB77472879F9E500F3F067 /* SearchViewController.swift */,
+				0DA581372881AFC2001BFF19 /* Search */,
+				0DF44F2A287FFB87004AB6A3 /* Details */,
 				0D0E8703287F0F45002FD980 /* Main */,
 			);
 			path = Scene;
@@ -120,6 +120,14 @@
 				0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		0DA581372881AFC2001BFF19 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0DAB77472879F9E500F3F067 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		0DAB77492879F9F600F3F067 /* Extensions */ = {
