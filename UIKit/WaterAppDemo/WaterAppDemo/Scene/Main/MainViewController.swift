@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         case main
     }
 
-    private let waterList = WaterData.list
+    private let waterList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     lazy var searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(onTappedSearchButton(_:)))
 

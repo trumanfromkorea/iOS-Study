@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D0E8701287F0F1A002FD980 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8700287F0F1A002FD980 /* WaterData.swift */; };
 		0D0E8707287F0FBC002FD980 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */; };
+		0DA581392881B446001BFF19 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA581382881B446001BFF19 /* NetworkManager.swift */; };
+		0DA5813C2881B517001BFF19 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA5813B2881B517001BFF19 /* Alamofire */; };
 		0DAB77442879F9B400F3F067 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0DAB77432879F9B400F3F067 /* SnapKit */; };
 		0DAB77462879F9D900F3F067 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB77452879F9D900F3F067 /* DetailsViewController.swift */; };
 		0DAB77482879F9E500F3F067 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB77472879F9E500F3F067 /* SearchViewController.swift */; };
@@ -47,6 +49,7 @@
 /* Begin PBXFileReference section */
 		0D0E8700287F0F1A002FD980 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
 		0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DA581382881B446001BFF19 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0DAB77452879F9D900F3F067 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		0DAB77472879F9E500F3F067 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0DAB774A2879FA0300F3F067 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA5813C2881B517001BFF19 /* Alamofire in Frameworks */,
 				0DAB77442879F9B400F3F067 /* SnapKit in Frameworks */,
 				0DF44F29287FF8D4004AB6A3 /* Charts in Frameworks */,
 			);
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				0D0E8700287F0F1A002FD980 /* WaterData.swift */,
+				0DA581382881B446001BFF19 /* NetworkManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			packageProductDependencies = (
 				0DAB77432879F9B400F3F067 /* SnapKit */,
 				0DF44F28287FF8D4004AB6A3 /* Charts */,
+				0DA5813B2881B517001BFF19 /* Alamofire */,
 			);
 			productName = WaterAppDemo;
 			productReference = 0DF30A8B2879AF74001F0DD5 /* WaterAppDemo.app */;
@@ -295,6 +301,7 @@
 			packageReferences = (
 				0DAB77422879F9B400F3F067 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				0DF44F27287FF8D4004AB6A3 /* XCRemoteSwiftPackageReference "Charts" */,
+				0DA5813A2881B517001BFF19 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 0DF30A8C2879AF74001F0DD5 /* Products */;
 			projectDirPath = "";
@@ -338,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA581392881B446001BFF19 /* NetworkManager.swift in Sources */,
 				0DAB77482879F9E500F3F067 /* SearchViewController.swift in Sources */,
 				0DAB774D2879FA7C00F3F067 /* UIColor+.swift in Sources */,
 				0DAB774B2879FA0300F3F067 /* UIButton+.swift in Sources */,
@@ -688,6 +696,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0DA5813A2881B517001BFF19 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		0DAB77422879F9B400F3F067 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -707,6 +723,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0DA5813B2881B517001BFF19 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DA5813A2881B517001BFF19 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		0DAB77432879F9B400F3F067 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0DAB77422879F9B400F3F067 /* XCRemoteSwiftPackageReference "SnapKit" */;

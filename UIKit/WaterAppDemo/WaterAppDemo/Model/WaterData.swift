@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct WaterData {
+struct WaterData: Codable {
     var name: String
+    var inspectionAgency: String
+    var sampleDate: String
     
-    static let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    enum CodingKeys: String, CodingKey {
+        case name = "ENTPRS_NM"
+        case inspectionAgency = "CHCK_INSTT"
+        case sampleDate = "WTRSMPLE_DE"
+    }
 }
