@@ -25,7 +25,7 @@ struct WaterHeader: Codable {
     var message: String
 }
 
-struct WaterData: Codable {
+struct WaterData: Codable, Hashable {
     var name: String
     var inspectionAgency: String
     var sampleDate: String

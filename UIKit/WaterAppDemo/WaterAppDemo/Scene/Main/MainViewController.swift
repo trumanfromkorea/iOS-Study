@@ -13,19 +13,27 @@ class MainViewController: UIViewController {
     private var viewModel = MainViewModel(NetworkManager.shared)
 
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
-    typealias Item = Int
+    typealias Item = WaterData
     enum Section {
         case main
     }
 
-    private let waterList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    private var waterDataList: [WaterData] = []
 
     lazy var searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(onTappedSearchButton(_:)))
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.getDataList()
+        viewModel.getDataList { result in
+            switch result {
+            case let .success(responseData):
+                self.waterDataList = responseData.getDrinkWaterTKAWY.item
+                self.applySectionItems(responseData.getDrinkWaterTKAWY.item)
+            case let .failure(error):
+                print(error)
+            }
+        }
 
         configureViewSettings()
         configureLayout()
@@ -73,17 +81,17 @@ extension MainViewController {
         mainCollectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
         mainCollectionView.showsVerticalScrollIndicator = false
 
-        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: mainCollectionView, cellProvider: { _, indexPath, _ in
-            guard let cell = self.mainCollectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier, for: indexPath) as? MainCollectionViewCell else {
+        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: mainCollectionView, cellProvider: { collectionView, indexPath, item in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier, for: indexPath) as? MainCollectionViewCell else {
                 return nil
             }
 
-            cell.configureCell()
+            cell.configureCell(item)
 
             return cell
         })
 
-        applySectionItems(waterList)
+        applySectionItems(waterDataList)
 
         mainCollectionView.collectionViewLayout = collectionViewLayout()
     }

@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		0D0E8701287F0F1A002FD980 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8700287F0F1A002FD980 /* WaterData.swift */; };
 		0D0E8707287F0FBC002FD980 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */; };
+		0D776DDF2884658E0022D9A7 /* CustomNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D776DDE2884658E0022D9A7 /* CustomNetworkError.swift */; };
+		0D776DE1288469DD0022D9A7 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D776DE0288469DD0022D9A7 /* ServerModel.swift */; };
 		0DA581392881B446001BFF19 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA581382881B446001BFF19 /* NetworkManager.swift */; };
 		0DA5813C2881B517001BFF19 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA5813B2881B517001BFF19 /* Alamofire */; };
 		0DA5813E2881BD7D001BFF19 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5813D2881BD7D001BFF19 /* MainViewModel.swift */; };
-		0DA581402881C3BA001BFF19 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5813F2881C3BA001BFF19 /* APIManager.swift */; };
+		0DA581402881C3BA001BFF19 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5813F2881C3BA001BFF19 /* APIModel.swift */; };
 		0DAB77442879F9B400F3F067 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0DAB77432879F9B400F3F067 /* SnapKit */; };
 		0DAB77462879F9D900F3F067 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB77452879F9D900F3F067 /* DetailsViewController.swift */; };
 		0DAB77482879F9E500F3F067 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB77472879F9E500F3F067 /* SearchViewController.swift */; };
@@ -51,9 +53,11 @@
 /* Begin PBXFileReference section */
 		0D0E8700287F0F1A002FD980 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
 		0D0E8706287F0FBC002FD980 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D776DDE2884658E0022D9A7 /* CustomNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNetworkError.swift; sourceTree = "<group>"; };
+		0D776DE0288469DD0022D9A7 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		0DA581382881B446001BFF19 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0DA5813D2881BD7D001BFF19 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		0DA5813F2881C3BA001BFF19 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0DA5813F2881C3BA001BFF19 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		0DAB77452879F9D900F3F067 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		0DAB77472879F9E500F3F067 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0DAB774A2879FA0300F3F067 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -105,9 +109,11 @@
 		0D0E86FF287F0F10002FD980 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0DA5813F2881C3BA001BFF19 /* APIManager.swift */,
+				0DA5813F2881C3BA001BFF19 /* APIModel.swift */,
 				0DA581382881B446001BFF19 /* NetworkManager.swift */,
+				0D776DE0288469DD0022D9A7 /* ServerModel.swift */,
 				0D0E8700287F0F1A002FD980 /* WaterData.swift */,
+				0D776DDE2884658E0022D9A7 /* CustomNetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,11 +359,13 @@
 			files = (
 				0DA581392881B446001BFF19 /* NetworkManager.swift in Sources */,
 				0DAB77482879F9E500F3F067 /* SearchViewController.swift in Sources */,
+				0D776DDF2884658E0022D9A7 /* CustomNetworkError.swift in Sources */,
 				0DAB774D2879FA7C00F3F067 /* UIColor+.swift in Sources */,
+				0D776DE1288469DD0022D9A7 /* ServerModel.swift in Sources */,
 				0DAB774B2879FA0300F3F067 /* UIButton+.swift in Sources */,
 				0D0E8701287F0F1A002FD980 /* WaterData.swift in Sources */,
 				0DA5813E2881BD7D001BFF19 /* MainViewModel.swift in Sources */,
-				0DA581402881C3BA001BFF19 /* APIManager.swift in Sources */,
+				0DA581402881C3BA001BFF19 /* APIModel.swift in Sources */,
 				0DF30ABF2879AFE9001F0DD5 /* CustomNavigationController.swift in Sources */,
 				0DF30A932879AF74001F0DD5 /* MainViewController.swift in Sources */,
 				0DF30A8F2879AF74001F0DD5 /* AppDelegate.swift in Sources */,

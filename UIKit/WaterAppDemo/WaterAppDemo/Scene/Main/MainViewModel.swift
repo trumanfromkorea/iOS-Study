@@ -14,20 +14,22 @@ class MainViewModel {
         self.networkManager = networkManager
     }
 
-    func getDataList() {
-        let apiKey = "9pf41LSuG2XHOFg0ebOKNyhRH7DfqMevft4TT83j8jzWwI0qbodqkVfkFyOdimpCmqd8OuU1szNqKII%2FdZkPVg%3D%3D"
-        
-        let url = "http://apis.data.go.kr/1480523/Dwqualityservice/getDrinkWaterTKAWY?serviceKey=\(apiKey)&resultType=json"
-        
-        
-        let queryParams: [String: Any] = [:]
-//        [
-//            "serviceKey": apiKey,
-//            "resultType": "json",
-//        ]
-        
-        let api = APIData(method: Method.get, url: url, queryParams: queryParams)
+    func getDataList(completion: @escaping (Result<ResponseData, CustomNetworkError>) -> Void) {
+        let queryParams: [String: Any] = [
+            "serviceKey": ServerInfo.serviceKey,
+            "resultType": "json",
+        ]
 
-        networkManager.request(api: api)
+        var api = APIData(method: Method.get, url: ServerInfo.serverURL)
+        api.setQueryParams(queryParams)
+
+        networkManager.request(api: api) { result in
+            switch result {
+            case let .success(responseData):
+                completion(.success(responseData))
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
     }
 }
