@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3B0CC5291E8DAB00263E8C /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3B0CC4291E8DAB00263E8C /* UIImage+.swift */; };
 		0D5B2655291D1B3600E44606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B2654291D1B3600E44606 /* AppDelegate.swift */; };
 		0D5B2657291D1B3600E44606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B2656291D1B3600E44606 /* SceneDelegate.swift */; };
 		0D5B2659291D1B3600E44606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B2658291D1B3600E44606 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D3B0CC4291E8DAB00263E8C /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		0D5B2651291D1B3600E44606 /* CustomTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5B2654291D1B3600E44606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D5B2656291D1B3600E44606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3B0CC1291E8D6A00263E8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D3B0CC4291E8DAB00263E8C /* UIImage+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0D5B2648291D1B3600E44606 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		0D5B2653291D1B3600E44606 /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				0D3B0CC1291E8D6A00263E8C /* Extensions */,
 				0D5B2665291D1B3700E44606 /* Info.plist */,
 				0D5B2660291D1B3700E44606 /* Assets.xcassets */,
 				0D5B268C291D210A00E44606 /* App */,
@@ -311,6 +322,7 @@
 				0D5B2659291D1B3600E44606 /* ViewController.swift in Sources */,
 				0D5B268F291D216500E44606 /* SecondViewController.swift in Sources */,
 				0D5B2655291D1B3600E44606 /* AppDelegate.swift in Sources */,
+				0D3B0CC5291E8DAB00263E8C /* UIImage+.swift in Sources */,
 				0D5B2691291D216F00E44606 /* ThirdViewController.swift in Sources */,
 				0D5B2657291D1B3600E44606 /* SceneDelegate.swift in Sources */,
 			);
