@@ -10,45 +10,62 @@ import RxSwift
 import UIKit
 
 class ViewController: UIViewController {
-    private var viewModel = ViewModel()
+    private var viewModel: ViewModel?
+
+    @IBOutlet var idField: UITextField!
+    @IBOutlet var passwordField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        viewModel = ViewModel(
+            id: idField.rx.controlEvent(.editingChanged)
+                .asObservable()
+                .compactMap { self.idField.text },
+            password: passwordField.rx.controlEvent(.editingChanged)
+                .asObservable()
+                .compactMap { self.passwordField.text }
+        )
+    }
+
+    @IBAction func buttonTapped(_ sender: Any) {
+        viewModel?.buttonTapped()
     }
 }
 
 class ViewModel {
-    var users = BehaviorSubject(value: [User]())
-    
-    func fetchUsers() {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { data , response , error in
-            guard let data else {
-                return
-            }
-            
-            do {
-                let responseData = try JSONDecoder().decode([User].self, from: data)
-                self.users.on(.next(responseData))
-            } catch {
-                print(error.localizedDescription)
-            }
-            
-        }
-        task.resume()
+    let disposeBag = DisposeBag()
+
+    var id: Observable<String>
+    var password: Observable<String>
+
+    init(id: Observable<String>, password: Observable<String>) {
+        self.id = id
+        self.password = password
+
+        bind()
+    }
+
+    func buttonTapped() {
+        
+    }
+
+    private func bind() {
+//        id.subscribe(onNext: {
+//            print("id: ", $0)
+//        })
+//        .disposed(by: disposeBag)
+//
+//        password.subscribe(onNext: {
+//            print("pw: ", $0)
+//        })
+//        .disposed(by: disposeBag)
+        
+        Observable.combineLatest(id, password)
+            .subscribe(onNext: { print(">> \($0) \($1)")})
+            .disposed(by: disposeBag)
     }
 }
 
-//
-
-struct User: Codable {
-    let userID, id: Int
-    let title, body: String
-
-    enum CodingKeys: String, CodingKey {
-        case userID = "userId"
-        case id, title, body
-    }
+class Model {
 }
