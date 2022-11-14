@@ -7,68 +7,76 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet var imageView: UIImageView!
+class ViewController: UIViewController, UICollectionViewDelegate {
+    @IBOutlet var collectionView: UICollectionView!
+
+    var collectionViewItems: [String] = (1 ... 9).map { String($0) }
+
+    private var dataSource: UICollectionViewDiffableDataSource<Section, String>!
+
+    private enum Section {
+        case main
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBlurEffect(on: imageView)
-        getRandomImage()
-    }
 
-    @IBAction func refreshButtonTapped(_ sender: Any) {
-        getRandomImage()
-    }
+        collectionView.collectionViewLayout = collectionViewLayout()
 
-    private func getRandomImage() {
-        DispatchQueue.global().async {
-            guard let url = URL(string: "https://random.imagecdn.app/500/500"),
-                  let data = try? Data(contentsOf: url) else {
-                return
-            }
-
-            DispatchQueue.main.async { [weak self] in
-                let image = UIImage(data: data)
-
-                self?.imageView.image = UIImage(data: data)
-
-                UIView.animate(withDuration: 1, delay: 0) {
-                    self?.view.backgroundColor = image?.averageColor
-                }
-            }
-        }
-    }
-
-    private func setBlurEffect(on view: UIView) {
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.prominent)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(blurEffectView)
+        configureDataSource()
+        configureSnapShot()
     }
 }
 
-#if DEBUG
-    import SwiftUI
-    struct ViewControllerRepresentable: UIViewControllerRepresentable {
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            // leave this empty
-        }
+extension ViewController {
+    private func configureDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, String>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else {
+                return UICollectionViewCell()
+            }
 
-        @available(iOS 13.0.0, *)
-        func makeUIViewController(context: Context) -> some UIViewController {
-            ViewController()
-        }
+            cell.imageView.contentMode = .scaleToFill
+            cell.imageView.image = UIImage(named: itemIdentifier)
 
-        @available(iOS 13.0, *)
-        struct SnapKitVCRepresentable_PreviewProvider: PreviewProvider {
-            static var previews: some View {
-                Group {
-                    ViewControllerRepresentable()
-                        .ignoresSafeArea()
-                        .previewDisplayName("Preview")
-                        .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
-                }
+            return cell
+        })
+    }
+
+    private func configureSnapShot() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(collectionViewItems, toSection: .main)
+        dataSource.apply(snapshot)
+    }
+
+    private func collectionViewLayout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .fractionalHeight(1))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.interGroupSpacing = 20
+
+        section.visibleItemsInvalidationHandler = { _, offset, env in
+
+            let rawValue = offset.x / (env.container.contentSize.width - 40)
+            let index = Int(rawValue.rounded(.up))
+            let indexPath = IndexPath(item: index, section: 0)
+
+            guard let cell = self.collectionView.cellForItem(at: indexPath) as? CollectionViewCell else {
+                return
+            }
+
+            UIView.animate(withDuration: 0.5, delay: 0) {
+                self.view.backgroundColor = cell.imageView.image?.averageColor
             }
         }
-    } #endif
+
+        let layout = UICollectionViewCompositionalLayout(section: section)
+
+        return layout
+    }
+}

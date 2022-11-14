@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D32613529226CFE000DDA64 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D32613429226CFE000DDA64 /* UIView+.swift */; };
+		0D32613729226DF1000DDA64 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D32613629226DF1000DDA64 /* CollectionViewCell.swift */; };
 		0D3B0CC5291E8DAB00263E8C /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3B0CC4291E8DAB00263E8C /* UIImage+.swift */; };
 		0D5B2655291D1B3600E44606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B2654291D1B3600E44606 /* AppDelegate.swift */; };
 		0D5B2657291D1B3600E44606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B2656291D1B3600E44606 /* SceneDelegate.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D32613429226CFE000DDA64 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		0D32613629226DF1000DDA64 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		0D3B0CC4291E8DAB00263E8C /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		0D5B2651291D1B3600E44606 /* CustomTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5B2654291D1B3600E44606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0D3B0CC4291E8DAB00263E8C /* UIImage+.swift */,
+				0D32613429226CFE000DDA64 /* UIView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			children = (
 				0D5B2687291D1C8E00E44606 /* CustomTabBarController.swift */,
 				0D5B2658291D1B3600E44606 /* ViewController.swift */,
+				0D32613629226DF1000DDA64 /* CollectionViewCell.swift */,
 				0D5B268E291D216500E44606 /* SecondViewController.swift */,
 				0D5B2690291D216F00E44606 /* ThirdViewController.swift */,
 				0D5B2692291D217500E44606 /* FourthViewController.swift */,
@@ -314,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D32613529226CFE000DDA64 /* UIView+.swift in Sources */,
 				0D5B2688291D1C8E00E44606 /* CustomTabBarController.swift in Sources */,
 				0D5B265F291D1B3600E44606 /* CustomTabBar.xcdatamodeld in Sources */,
 				0D5B268A291D204500E44606 /* Coordinator.swift in Sources */,
@@ -321,6 +328,7 @@
 				0D5B2695291D219800E44606 /* FirstViewCoordinator.swift in Sources */,
 				0D5B2659291D1B3600E44606 /* ViewController.swift in Sources */,
 				0D5B268F291D216500E44606 /* SecondViewController.swift in Sources */,
+				0D32613729226DF1000DDA64 /* CollectionViewCell.swift in Sources */,
 				0D5B2655291D1B3600E44606 /* AppDelegate.swift in Sources */,
 				0D3B0CC5291E8DAB00263E8C /* UIImage+.swift in Sources */,
 				0D5B2691291D216F00E44606 /* ThirdViewController.swift in Sources */,
